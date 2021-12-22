@@ -1,0 +1,306 @@
+.heaveup {
+    /* position: relative;
+    top: 0;
+    transition: top ease 0.1s;
+    cursor: pointer; */
+}
+
+.heaveup:hover {
+    margin-top: -12.5%;
+}
+
+.row {
+    display: flex;
+    flex: 1;
+}
+
+#d {
+    margin: 1%;
+    width: 23%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    /* -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out; */
+}
+
+@media only screen and (max-width: 767px) {
+    #d {
+        width: 50%;
+    }
+}
+
+#d:hover {
+    -webkit-transform: scale(1.025);
+    transform: scale(1.025);
+}
+
+.card {
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    width: 100%;
+    border-radius: 12.5px;
+}
+
+.card:hover {
+    background-color: #b48948;
+}
+
+.showsidebar {
+    font-size: 85%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+    border-radius: 25px;
+    border: 2px solid #b48948;
+    background-color: #b48948;
+    color: #111111;
+}
+
+.showsidebar:hover {
+    border: 2px solid #dda859;
+    background-color: #dda859;
+}
+
+.sidebarhead {
+    font-size: 90%;
+    padding-top: 7.5%;
+    padding-bottom: 7.5%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.sidebtn {
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid #808080;
+    font-size: 75%;
+    border-radius: 50px;
+    padding: 12.5px;
+}
+
+.sidebtn:hover {
+    background-color: #fc8898;
+}
+
+select {
+    text-align: center;
+    text-align-last: center;
+    -moz-text-align-last: center;
+}
+
+.sidebtnapply {
+    text-decoration: none;
+    background: #808080;
+    color: black;
+    border: 1px solid #808080;
+    font-size: 80%;
+    border-radius: 50px;
+    padding: 12.5px;
+}
+
+.sidebtnapply:hover {
+    background-color: black;
+    ;
+}
+
+.catname {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5.5%;
+    border-radius: 25px;
+}
+
+.catname:hover {
+    background-color: #dda859;
+    color: #111111;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 15%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 90%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+
+/* Create a custom checkbox */
+
+.checkmark {
+    position: absolute;
+    top: 17.5%;
+    left: 5%;
+    height: 15px;
+    width: 15px;
+    background-color: #808080;
+    border-radius: 20%;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input~.checkmark {
+    background-color: #414141;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.container input:checked~.checkmark {
+    background-color: #b48948;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {
+    left: 25%;
+    top: 2%;
+    width: 50%;
+    height: 90%;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.catelement {
+    overflow-y: scroll;
+    flex: 2;
+    background-color: #414141;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    border-radius: 12.5px;
+}
+
+.floor:hover {
+    background-color: #414141;
+}
+
+.floordiv {
+    /* background: #414141; */
+    width: 100%;
+    border-radius: 25px;
+    padding: 2%;
+    color: #808080;
+}
+
+.floordiv:hover {
+    background-color: #414141;
+}
+
+#floordiv1 {
+    margin-right: 2%;
+}
+
+#floordiv4 {
+    margin-left: 2%;
+}
+
+#floordiv2 {
+    margin-right: 1.25%;
+}
+
+#floordiv3 {
+    margin-left: 1.25%;
+}
+
+.flooritem {
+    font-size: 70%;
+    color: #808080;
+}
+
+#sidebarinner {
+    padding-left: 2.5%;
+    padding-right: 1%;
+    border-radius: 12.5px;
+}
+
+#scrollbar {
+    padding-right: 1.5%;
+    margin-left: 10px;
+    flex: 2;
+    overflow-y: auto;
+}
+
+#scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 25px;
+}
+
+#scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 25px;
+}
+
+#scrollbar:hover::-webkit-scrollbar-track {
+    background: #808080;
+    border-radius: 25px;
+}
+
+#scrollbar:hover::-webkit-scrollbar-thumb {
+    background: #515151;
+    border-radius: 25px;
+}
+
+.twodivs {
+    display: flex;
+    padding: 5%;
+}
+
+.leftdiv {
+    width: 80%;
+}
+
+.rightdiv {
+    width: 20%;
+    float: right;
+    margin-top: 1.25%;
+}
+
+.pricep {
+    float: right;
+    color: #808080;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.price {
+    float: right;
+    font-size: 100%;
+    margin-right: 12.5%;
+}

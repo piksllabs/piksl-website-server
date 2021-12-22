@@ -1,0 +1,107 @@
+.google-visualization-tooltip {
+    background: #414141 !important;
+    color: white !important;
+    border-radius: 12.5px !important;
+    border: 1px solid #818181 !important;
+    display: inline-block !important;
+    box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.google-visualization-tooltip-item-list {
+    list-style-type: none;
+    margin: 6% !important;
+    padding: 6% !important;
+    display: inline-block !important;
+}
+
+.google-visualization-tooltip-item {
+    margin: 0% !important;
+    padding: 0% !important;
+    display: inline-block !important;
+}
+
+.centerlabel {
+    position: absolute;
+    top: 50%;
+    left: 50.5%;
+    transform: translate(-50%, -50%);
+}
+
+g g g text {
+    fill: white;
+}
+
+.walletassets {
+    display: flex;
+    border: 1px solid #808080;
+    border-radius: 25px;
+    padding: 1.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 2.5%;
+    width: 50%;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.divouter:hover {
+    border-radius: 12.5px;
+    border: 2px solid #808080;
+    background-color: #414141;
+}
+
+.smalldivs {
+    border-radius: 25px;
+    padding: 2.5%;
+    margin: 2%;
+    width: 50%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #414141;
+    color: #fff;
+    font-size: 80%;
+    text-align: center;
+    border-radius: 12.5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #414141 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+#walletaddress {
+    cursor: pointer;
+}
+
+.tooltip:hover #walletaddress {
+    color: white
+}

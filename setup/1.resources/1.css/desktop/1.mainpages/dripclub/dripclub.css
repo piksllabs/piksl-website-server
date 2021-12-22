@@ -1,0 +1,200 @@
+.fivediv {
+    display: flex;
+}
+
+.fivedivcolumn {
+    flex: 33.33%;
+}
+
+.hairstyles {
+    content: url("dripclub/indivelements/hairstyles/1.png");
+}
+
+.hairstyles:hover {
+    content: url("dripclub/indivelements/hairstyles/1back.png");
+}
+
+.mosaicrow {
+    display: flex;
+    margin-right: -10%;
+    margin-left: -10%;
+    overflow-x: visible;
+    flex: 1;
+}
+
+.mosaiccolumn {
+    width: 16.67%;
+    overflow: visible;
+}
+
+.mosaicimg {
+    /* border-radius: 12.5px; */
+    /* border: 10px solid #b48948; */
+    padding: 5px;
+    margin: 2.5%;
+    width: 67.67%;
+}
+
+.mosaicdiv {
+    background-image: url("../../../../3.images/samples/framegold2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0.5%;
+}
+
+.mosaictitlecolumn {
+    width: 50.1%;
+}
+
+.mosaictitlecolumnleft {
+    width: 49.9%;
+    display: flex;
+}
+
+.mosaictitlecolumnright {
+    width: 49.9%;
+    display: flex;
+}
+
+.mosaictitle {
+    font-size: 450%;
+    color: #D09E53;
+    white-space: nowrap;
+}
+
+@font-face {
+    font-family: "mexcellent";
+    src: url("../../../../3.images/mexcellent.otf") format("opentype");
+}
+
+#mosaicouterdiv {
+    background-image: url("../../../../3.images/back/bannerwithtitle2.PNG"), url("../../../../3.images/back/dripclubbanner3.PNG");
+    background-size: 125%;
+    background-position: center;
+    background-position-x: center, -50%;
+    background-repeat: no-repeat, repeat;
+}
+
+@media only screen and (max-width: 767px) {
+    #mosaicouterdiv {
+        background-image: url("../../../../3.images/back/bannerwithtitle.PNG"), url("../../../../3.images/back/dripclubbanner.PNG");
+        background-size: 150%;
+        background-position: center, 0%;
+        background-repeat: no-repeat, repeat;
+    }
+    #marketsmalldiv {
+        position: sticky;
+        bottom: 0%;
+    }
+    #marketimg {
+        transform: scale(2);
+    }
+}
+
+#curtainimg {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: none;
+}
+
+#firstrow {
+    padding-top: 1.5%;
+}
+
+#upper1 {
+    overflow-x: hidden;
+    position: sticky;
+    z-index: -2;
+    background-color: black;
+}
+
+#upper2 {
+    z-index: -1;
+    position: sticky;
+}
+
+#gridbanner {
+    background-image: url("../../../../3.images/back/grid.png");
+    background-size: 100%;
+    background-position: center;
+    position: sticky;
+    z-index: -10000;
+}
+
+#blackscreen {
+    position: sticky;
+    z-index: -100;
+    background-color: #111111f5;
+}
+
+#gridtext {
+    z-index: 1;
+}
+
+#upper4 {
+    z-index: 3;
+    background-color: #212121;
+    padding-top: 10%;
+}
+
+#dripclubtitle {
+    position: relative;
+}
+
+.elementsimg {
+    width: 50%;
+}
+
+.fourdivs {}
+
+#marketsmalldiv {
+    position: sticky;
+    bottom: -15%;
+}
+
+li {
+    display: inline-block;
+    font-size: 250%;
+    color: #808080;
+}
+
+.nftotherimgs {
+    position: absolute;
+    top: 0;
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.catnames {
+    font-size: 350%;
+    font-weight: bolder;
+}
+
+#upper3 {}
+
+#gradientback {
+    position: sticky;
+    background: linear-gradient(#d09e53b7, #d09e53b7), url("https://64.media.tumblr.com/0cd64f9d52565f5551835162e9a1f9da/tumblr_pn82sbdBMW1uzwgsuo1_400.gifv"), #d09e53b7;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+#nftcats {
+    /* background-color: #d0ddf8; */
+    z-index: 10;
+}
+
+#nftguy {
+    z-index: -1;
+}
+
+#blockchainbanner {
+    z-index: 1000000000000;
+}

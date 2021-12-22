@@ -1,0 +1,25 @@
+.propdiv {
+    width: 33%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-right: 1%;
+    margin-left: 1%;
+    border-radius: 25px;
+}
+
+.proptype {
+    font-size: 70%;
+    color: #808080;
+    font-weight: bold;
+}
+
+.timeframeoptions {
+    background-color: #25282c;
+    border: 1px solid #b48948;
+    padding: 12px;
+    color: white;
+}

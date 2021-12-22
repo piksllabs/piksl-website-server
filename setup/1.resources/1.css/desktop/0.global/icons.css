@@ -1,0 +1,325 @@
+.icons {
+    margin-bottom: -2.5%;
+    padding-right: 2.5%;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    padding: 2.5px;
+}
+
+.arrowdark {
+    border: solid #808080;
+    border-width: 0 2px 2px 0;
+    padding: 2.5px;
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+@font-face {
+    font-family: "FontAwesomeSolid";
+    font-style: normal;
+    src: url("../.../../../../3.images/fa-solid-900.ttf") format("truetype");
+}
+
+.icon::before {
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    padding-right: 7.5px;
+}
+
+.target::after {
+    content: ' \f360';
+    font-family: "FontAwesomeSolid";
+    color: #b48948;
+    font-size: 80%;
+}
+
+.buyicon::before {
+    content: ' \f290';
+    font-family: "FontAwesomeSolid";
+    color: #111111;
+}
+
+.bluebutton:hover .buyicon::before {}
+
+
+/* .buyicon:hover::before {
+    color: #2081e2;
+} */
+
+.offericon::before {
+    content: ' \f02b';
+    font-family: "FontAwesomeSolid";
+    color: #808080;
+    font-size: 90%;
+}
+
+.whitebuttonhollow:hover .offericon::before {
+    color: #c0c0c0;
+}
+
+.mintedicon::before {
+    content: ' \f0d0';
+    font-family: "FontAwesomeSolid";
+    color: #818181;
+    font-size: 90%;
+}
+
+.transfericon::before {
+    content: ' \f362';
+    font-family: "FontAwesomeSolid";
+    color: #818181;
+    font-size: 90%;
+}
+
+.profileicon::before {
+    content: ' \f2bd';
+    font-family: "FontAwesomeSolid";
+    color: #111111;
+    font-size: 90%;
+}
+
+.bluebuttonhollow:hover .profileicon::before {}
+
+.signinicon::before {
+    content: ' \f2bd';
+    font-family: "FontAwesomeSolid";
+    color: #111111;
+    font-size: 90%;
+}
+
+.sellicon::before {
+    content: ' \f682';
+    font-family: "FontAwesomeSolid";
+    color: #111111;
+    font-size: 90%;
+    margin-right: 5%;
+}
+
+.blueoffericon::before {
+    content: ' \f02b';
+    font-family: "FontAwesomeSolid";
+    color: #111111;
+    font-size: 90%;
+}
+
+.cancelicon::before {
+    content: ' \f05e';
+    font-family: "FontAwesomeSolid";
+    color: #808080;
+    font-size: 90%;
+}
+
+.whitebuttonhollow:hover .cancelicon::before {
+    color: #c0c0c0;
+}
+
+.lowerpriceicon::before {
+    content: ' \f0ab';
+    font-family: "FontAwesomeSolid";
+    color: black;
+    font-size: 90%;
+}
+
+.loginicon {
+    padding-right: 15% !important;
+}
+
+.iconbtn {
+    white-space: nowrap;
+    padding-right: 12.5px;
+}
+
+.ethicon::before {
+    content: ' \f42e';
+    font-family: "Font Awesome 5 Brands";
+    color: white;
+    font-size: 90%;
+    padding-right: 15%;
+}
+
+.wethicon::before {
+    content: ' \f42e';
+    font-family: "Font Awesome 5 Brands";
+    color: #ce1b69;
+    font-size: 90%;
+    padding-right: 15%;
+}
+
+.buysmallicon::before {
+    content: ' \f09d';
+    font-family: "FontAwesomeSolid";
+    color: #111111;
+    font-size: 80%;
+    padding-right: 15%;
+}
+
+.bluebuttonhollow:hover .buysmallicon::before {
+    /* color: #fc8898; */
+}
+
+.sendicon::before {
+    content: ' \f1d8';
+    font-family: "FontAwesomeSolid";
+    color: #111111;
+    font-size: 80%;
+    padding-right: 15%;
+}
+
+.bluebuttonhollow:hover .sendicon::before {
+    /* color: #fc8898; */
+}
+
+.swapicon::before {
+    content: ' \f2f1';
+    font-family: "FontAwesomeSolid";
+    color: #111111;
+    font-size: 80%;
+    padding-right: 15%;
+}
+
+.bluebuttonhollow:hover .swapicon::before {
+    /* color: #fc8898; */
+}
+
+.usdicon::before {
+    content: ' \f155';
+    font-family: "FontAwesomeSolid";
+    color: white;
+    font-size: 80%;
+    padding-right: 5%;
+}
+
+.usdticon::before {
+    content: '';
+    background: url('../../../3.images/tether.svg');
+    color: #50AF95;
+    padding-right: 0%;
+    width: 2.15%;
+    height: 2.15%;
+    background-size: 100% 100%;
+    position: absolute;
+    margin-left: -2%;
+    margin-top: 0.35%;
+}
+
+.crossicon::before {
+    content: ' \f00d';
+    font-family: "FontAwesomeSolid";
+    color: #808080;
+    font-size: 80%;
+    padding-right: 5px;
+}
+
+.graybuttonhollow:hover .crossicon::before {
+    color: #c0c0c0;
+}
+
+.copyicon::after {
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    content: ' \f24d';
+    font-family: "FontAwesomeSolid";
+    color: #808080;
+    font-size: 80%;
+    padding-right: 5px;
+    cursor: pointer;
+}
+
+.tooltip:hover .copyicon::after {
+    color: white;
+}
+
+.okayicon::before {
+    content: ' \f058';
+    font-family: "FontAwesomeSolid";
+    color: white;
+    font-size: 80%;
+    padding-right: 5px;
+}
+
+.twittericon::before {
+    content: ' \f099';
+    font-family: "Font Awesome 5 Brands";
+    color: #111111;
+    font-size: 100%;
+}
+
+.discordicon::before {
+    content: ' \f392';
+    font-family: "Font Awesome 5 Brands";
+    color: #111111;
+    font-size: 100%;
+}
+
+.filtericon::before {
+    content: ' \f0b0';
+    font-family: "FontAwesomeSolid";
+    color: #111111;
+    font-size: 100%;
+}
+
+.homeicon::before {
+    content: ' \f015';
+    font-family: "FontAwesomeSolid";
+    color: white;
+    font-size: 100%;
+}
+
+.marketicon::before {
+    content: ' \f290';
+    font-family: "FontAwesomeSolid";
+    color: white;
+    font-size: 100%;
+}
+
+.fashionicon::before {
+    content: ' \f553';
+    font-family: "FontAwesomeSolid";
+    color: white;
+    font-size: 100%;
+}
+
+.roadmapicon::before {
+    content: ' \f5a0';
+    font-family: "FontAwesomeSolid";
+    color: white;
+    font-size: 100%;
+}
+
+.originalsicon::before {
+    content: ' \f058';
+    font-family: "FontAwesomeSolid";
+    color: white;
+    font-size: 100%;
+}
+
+.fab {
+    border-radius: 12.5px;
+    padding: 10px;
+    justify-items: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.fa-twitter {
+    background-color: #1D9BF0;
+}
+
+.fa-discord {
+    background-color: #5562EA;
+}

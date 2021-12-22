@@ -1,0 +1,41 @@
+#upper {
+    background-image: url("https://i.gifer.com/R3MI.gif");
+    background-size: cover;
+    background-position: center;
+    position: sticky;
+    z-index: -12;
+    color: black;
+}
+
+#subheading {
+    position: sticky;
+    z-index: -10;
+}
+
+#roadmaptitle {
+    position: sticky;
+}
+
+#projectstitle {
+    position: sticky;
+}
+
+#venturestitle {
+    position: sticky;
+}
+
+#pikslspacetitle {
+    position: sticky;
+}
+
+#projects {
+    background-color: #99c1d0cb;
+}
+
+#ventures {
+    background-color: #b48948b4;
+}
+
+#pikslspace {
+    background-color: #FFA6A6b4;
+}

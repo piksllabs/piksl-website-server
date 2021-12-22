@@ -1,0 +1,21 @@
+#upper {
+    background-image: url("https://64.media.tumblr.com/076126898f49cf6102af7d0ae0f1dc92/tumblr_pu405a84Ks1uzwgsuo1_400.gifv");
+    background-size: cover;
+    position: sticky;
+    z-index: -2;
+}
+
+#fashionbanner {
+    position: sticky;
+    z-index: -1
+}
+
+#blackscreen {
+    position: sticky;
+    z-index: -1;
+    background-color: #111111f5;
+}
+
+#gridtext {
+    z-index: 10;
+}

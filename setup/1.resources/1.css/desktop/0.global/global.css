@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    font-family: "Poppins", "Google Sans", "Fira Sans", "Roboto", Arial, sans-serif;
+    background: #111111;
+    color: white;
+}
+
+#desktop {
+    display: block;
+}
+
+#mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    #desktop {
+        display: none;
+    }
+    #mobile {
+        display: block;
+    }
+}
+
+.vertcenter {
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+    /* More style: */
+}
+
+.bighover:hover {
+    font-size: 110%;
+    padding: 14px;
+}
+
+.pointer {
+    position: relative;
+    top: 0;
+    transition: top ease 0.1s;
+    cursor: pointer;
+}
+
+.pointer:hover {}
+
+.newvertcenter {
+    position: relative;
+}
+
+.newvertcenterelement {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.onlyvertcenter {
+    display: flex;
+    align-items: center;
+}
+
+.containerdivs {
+    background: #2c2c2c;
+    border: 1px solid #808080;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.267);
+    border-radius: 12.5px;
+}
+
+.smalldivs {
+    border: 1px solid #808080;
+}
+
+#loading {
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#upperinnermobile {
+    font-size: 105%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}

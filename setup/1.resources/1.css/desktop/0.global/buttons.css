@@ -1,0 +1,150 @@
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+    text-size-adjust: 100%;
+}
+
+.bluelink {
+    color: #D09E53 !important;
+    cursor: pointer;
+}
+
+.bluelink:hover {
+    color: #e6af5c !important;
+}
+
+.buttonlink:hover {
+    background-color: transparent !important;
+}
+
+.bluebutton {
+    border-radius: 50px;
+    padding: 12.5px;
+    border: 2px solid #D09E53;
+    background: #D09E53;
+    color: #111111;
+    font-weight: bold;
+}
+
+.bluebutton:hover {
+    background: #e6af5c;
+    border: 2px solid #e6af5c;
+}
+
+.graybutton {
+    border-radius: 50px;
+    padding: 12.5px;
+    border: 2px solid #414141;
+    background: #414141;
+    color: white;
+    opacity: 0.5;
+    font-weight: bold;
+}
+
+.graybutton:hover {
+    background: transparent;
+    color: #808080;
+    border: 2px solid #808080;
+}
+
+.bluebuttonhollow {
+    border-radius: 50px;
+    padding: 12.5px;
+    background: transparent;
+    border: 2px solid #D09E53;
+    color: #D09E53;
+    font-weight: bold;
+}
+
+.bluebuttonhollow:hover {
+    border: 2px solid #dda859;
+    color: #dda859;
+}
+
+.whitebutton {
+    border-radius: 50px;
+    padding: 12.5px;
+    background: #808080;
+    border: 2px solid #808080;
+    color: black;
+    font-weight: bold;
+}
+
+.whitebutton:hover {
+    border: 2px solid #c0c0c0;
+    background: #c0c0c0;
+}
+
+.graybuttonhollow {
+    border-radius: 50px;
+    padding: 12.5px;
+    background: transparent;
+    border: 2px solid #808080;
+    color: #808080;
+    font-weight: bold;
+}
+
+.graybuttonhollow:hover {
+    border: 2px solid #c0c0c0;
+    color: #c0c0c0;
+}
+
+.whitebuttonhollow {
+    border-radius: 50px;
+    padding: 12.5px;
+    background: transparent;
+    border: 2px solid #808080;
+    color: #808080;
+    font-weight: bold;
+}
+
+.whitebuttonhollow:hover {
+    border: 2px solid #c0c0c0;
+    color: #c0c0c0;
+}
+
+.headingbutton {
+    border-radius: 50px;
+    border: 1px solid #808080;
+    font-size: 80%;
+    padding: 7px;
+    color: #808080;
+    margin-bottom: 1%;
+    cursor: none;
+    background-color: #1b1b1b;
+    font-weight: bold;
+}
+
+.headerbutton {
+    border-radius: 50px;
+    padding: 12.5px;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+}
+
+.headerbutton:hover {
+    border: 2px solid #D09E53;
+    background: #D09E53;
+    color: #111111;
+}
+
+.mobileheadingbutton {
+    border-radius: 50px;
+    border: 1px solid #D09E53;
+    font-size: 100%;
+    padding: 7px;
+    color: #D09E53;
+    margin-bottom: 1%;
+    cursor: none;
+    background-color: #111111;
+    font-weight: bold;
+}

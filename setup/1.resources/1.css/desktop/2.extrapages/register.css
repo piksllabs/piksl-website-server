@@ -1,0 +1,6 @@
+.registerpage {
+    background-image: url("../images/blackpattern.png");
+    background-size: cover;
+    background-repeat: repeat-y;
+    height: 100%;
+}

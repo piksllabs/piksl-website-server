@@ -1,0 +1,40 @@
+.navlinks {
+    font-size: 80%;
+    color: #808080;
+    cursor: pointer;
+}
+
+.navlinks:hover {
+    color: white;
+}
+
+.navcats {
+    font-weight: bold;
+    font-size: 90%;
+}
+
+a {
+    cursor: none;
+}
+
+#desktopfooter {
+    background-color: #0c0c0c;
+}
+
+#upperfooter {
+    padding-top: 0%;
+    padding-bottom: 0%;
+    background-image: url("../../../3.images/back/gradient2.gif");
+    background-size: cover;
+    color: black;
+    font-weight: bold;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(160px);
+}
+
+#lowerfooter {
+    padding-top: 2.5%;
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-bottom: 2.5%;
+}
