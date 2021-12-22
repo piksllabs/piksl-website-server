@@ -1,0 +1,133 @@
+<div id="headerbar">
+
+
+    <div id="desktopheader">
+        <div style="padding:0.5%;
+    padding-left:7.5%;padding-right:7.5%; display:flex; ">
+            <div class="" style="width: 80%; display:flex;">
+                <a href="/" style="float: left;"><img class="headerlogo"></a>
+
+                <div class="vertcenter" style="margin-left: 1.5%;">
+                    {{> 0.layout/global/dropdowns/piksloriginals}}
+                </div>
+                <div class="vertcenter" style="margin-left: 0.5%; "><a href="/marketplace">
+                        <button class="headerbutton" style=" font-size:80%;">Marketplace</button></a>
+                </div>
+                <div class="vertcenter" style="margin-left: 0.5%;  "><a href="/fashion">
+                        <button class="headerbutton" style=" font-size:80%;">Fashion</button></a>
+                </div>
+                <div class="vertcenter" style="margin-left: 0.5%;  "><a href="/roadmap">
+                        <button class="headerbutton" style=" font-size:80%;">Roadmap</button></a>
+                </div>
+            </div>
+
+            <div style="width: 20%; display: flex; flex-direction: row; justify-content: flex-end;">
+                <div class="vertcenter">
+                    <div id="profilelink">
+                        <button class="bluebutton iconbtn loginicon" style="padding:10px;">
+                            <span id="loginbtn" class="icon signinicon" style="font-size: 85%; font-weight:bold;">Sign
+                                in</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="vertcenter" style="">
+                    {{> 0.layout/global/dropdowns/login}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobileheader">
+        <div style="display:flex">
+            <div style="width: 20%;" class="onlyvertcenter">
+                <div class="container" onclick="myFunction(this)" id="menu-bar">
+                    <div class="bar1"></div>
+                    <div class="invis"></div>
+                    <div class="bar3"></div>
+                </div>
+
+            </div>
+            <div style="width: 60%;" class="">
+                <center><a href="/" style=""><img id="mobileheaderlogo"></a>
+                </center>
+            </div>
+            <div id="dropicon" style="width: 20%;">
+
+            </div>
+        </div>
+
+        <nav id="navbar">
+
+
+            <p class="menuitem "><a href="/" class="icon homeicon">Home</a></p>
+            <p class="menuitem"><a href="/dripclub" class="icon originalsicon">Piksl Originals</a></p>
+            <p class="menuitem"><a href="/marketplace" class="icon marketicon">Marketplace</a></p>
+            <p class="menuitem"><a href="/fashion" class="icon fashionicon">Fashion</a></p>
+            <p class="menuitem"><a href="/roadmap" class="icon roadmapicon">Roadmap</a></p>
+
+
+        </nav>
+    </div>
+</div>
+
+
+
+<div id="mobileheaderbar" style="display:none;">
+
+
+</div>
+
+
+{{> 0.layout/global/loginmodal}}
+
+
+<script>
+    function myFunction(x) {
+        x.classList.toggle("change");
+    }
+
+
+
+
+    let w;
+    let h;
+
+    window.addEventListener('load', function () {
+        calculatelogo();
+    });
+
+    function calculatelogo() {
+        w = window.innerWidth;
+        h = window.innerHeight;
+        header = document.getElementById("headerbar");
+        headerheight = header.innerHeight;
+        imgheight = document.getElementById("mobileheaderlogo").offsetHeight;
+        console.log(headerheight, imgheight);
+
+        document.getElementById("mobileheaderlogo").style.marginTop = ((headerheight - imgheight) / 2) + "px";
+
+        let toggle = 0;
+        $(document).ready(function () {
+            $('#menu-bar').click(function () {
+
+
+                if (toggle == 0) {
+                    document.getElementById("headerbar").style.background = "#111111";
+                    document.getElementById("navbar").style.minHeight = h + "px";
+                    document.getElementById("navbar").style.display = "block";
+                    toggle = 1;
+                } else {
+                    document.getElementById("headerbar").style.background = "#111111da";
+                    document.getElementById("navbar").style.minHeight = 0 + "px";
+                    document.getElementById("navbar").style.display = "none";
+                    toggle = 0;
+                }
+                $("nav ul").slideToggle("slow"); /* this function show/hide the menu when you click the bar icon */
+
+            })
+            $('nav ul li  a').click(function () {
+                $('nav  ul ').slideToggle("slow"); /* this function hide the menu when you click on a link*/
+            })
+        });
+    }
+</script>

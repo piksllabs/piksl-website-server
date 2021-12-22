@@ -1,0 +1,41 @@
+<div id="sell" style="display: none;">
+  <p style="color: #808080;">Price</p>
+  <div style="display: flex;">
+    <div style="width: 35%;">
+      <select id="currency" name="currency"
+        style="width: 100%; padding: 12px; padding-right: 12%;  border-radius: 12.5px; justify-items: center; background: transparent; border: 1px solid #808080; color: white;">
+        <option value="saab" style="background-color: #202020; border: 1px solid #808080; padding:12px; color: white;">
+          ETH (&#926;)</option>
+      </select>
+    </div>
+    <div style="width: 65%; padding-left:2.5%">
+      <form>
+        <input oninput="inusd('sellamount')" autocomplete="off" type="text" id="sellamount" name="sellamount"
+          placeholder="Amount"
+          style="text-align: center;padding:14px; width: 75px; background-color: transparent; border: 1px solid #808080; color: white; width: 100%;   border-radius: 12.5px;">
+      </form>
+    </div>
+  </div>
+  <p id="sellamountinusd" style="color: #808080; font-size:80%; float:right; margin-right:1%l margin-top:1%"></p>
+  <br>
+  <p style="color: #808080;">Duration</p>
+  <select id="selltimeframe" name="timeframe"
+    style="width: 100%; padding: 12px; padding-right: 12%;  border-radius: 12.5px; justify-items: center; background: transparent; border: 1px solid #808080; color: white;">
+    <option value="14515200" name="14515200" class="timeframeoptions">6 months</option>
+    <option value="2419200" name="2419200" class="timeframeoptions">1 month</option>
+    <option value="604800" name="604800" class="timeframeoptions">1 week</option>
+    <option value="259200" name="259200" class="timeframeoptions">3 days</option>
+    <option value="86400" name="86400" class="timeframeoptions">1 day</option>
+    <option value="21600" name="21600" class="timeframeoptions">6 hours</option>
+    <option value="3600" name="3600" class="timeframeoptions">1 hour</option>
+  </select>
+  <br><br>
+  <center>
+    <p id="sellp" style="color: #808080;">Continue to process your listing</p>
+  </center>
+  <center>
+    <p id="sellerror" style="color: #FE6579; font-size:90%; display: none;">Enter valid listing amount</p>
+  </center>
+  <br>
+  <center><button class="bluebutton" onclick="continueselling('sell');" id="sellbutton">Continue</button></center>
+</div>

@@ -1,0 +1,50 @@
+<div id="gaspriceestimation" style="display: none;">
+
+
+
+    <center>
+        <p id="gasestimationp" style="font-size: 90%;"></p>
+    </center>
+    {{!--
+    <hr class="solid" style="color : #414141; border-radius: 5px; border:1px solid #414141"> --}}
+    <div style="display: flex;" id="gasestimationamount">
+        <div style="width: 90%;">
+            <p style="color: #808080; margin-top:2.5%">Amount</p>
+        </div>
+        <div style="width: 10%;">
+            <p style=" float:right; font-size:100%" id="gasestimationethprice">1.45&#926;</p>
+            <p style="color: #808080; font-size:90%; float:right" id="gasestimationusdprice">$3,456.87</p>
+        </div>
+    </div>
+    {{!-- <a class="bluelink" style="font-size:90%; float:right" onclick="editgasfees();">EDIT</a> --}}
+    <br>
+    <div style="display: flex; padding-bottom:2.5%">
+        <div style="width: 90%;s">
+            <p style="color: #808080;">Estimated Gas Fees</p>
+            <p style="color: #2081E2; font-size:90%">Likely in 30 seconds</p>
+        </div>
+        <div style="width: 10%;">
+
+            <p style=" float:right" id="gaspriceineth">0.023&#926;</p>
+            <p style="color: #808080; font-size:90%; float:right" id="gaspriceinusd">$56.87</p>
+        </div>
+    </div>
+    <hr class="solid" style="color : #414141; border-radius: 5px; border:1px solid #414141; margin-bottom:2.5%"
+        id="gasestimationhr">
+
+    <div style="display: flex;" id="gasestimationtotal">
+        <div style="width: 90%;">
+            <p style="color: #808080; margin-top:5%">Total</p>
+        </div>
+        <div style="width: 10%;">
+            <p style=" float:right; font-size:150%" id="totalpriceineth">1.51&#926;</p>
+            <p style="color: #808080; font-size:90%; float:right" id="totalpriceinusd">$3,687.32</p>
+        </div>
+    </div>
+
+    <br><br>
+    <center>
+        <button id="gaspriceestimationconfirmbutton" class="bluebutton">Confirm</button>
+    </center>
+
+</div>

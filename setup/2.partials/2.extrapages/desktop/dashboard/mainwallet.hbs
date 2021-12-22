@@ -1,0 +1,163 @@
+<div id="mainwallet" style="width:37%; margin-left:2.5%; ">
+    <div style=" border-radius:12.5px; padding:2.5%;   " class="containerdivs">
+
+        <p style="font-size: 80%; color:#818181"><button class="headingbutton">Wallet Overview</button></p>
+
+        <center style="border: 1px solid #808080; border-radius:25px; margin-right:20%;margin-left:20%; padding:2.5%">
+            <button class="headingbutton">Total Value
+            </button>
+            <div style="margin-bottom: -3.5%;">
+                <div class="tooltip" onmouseout="changecopytextback()">
+                    <p onclick="copytoclipboard('walletaddress')"
+                        style="font-size: 80%; color:#808080; padding:7px; margin-bottom:-2.5%" class="copyicon">
+                        <span class="tooltiptext" id="myTooltip">Copy to
+                            clipboard</span>
+                        <span id="walletaddress"></span>
+                    </p>
+                </div>
+            </div>
+
+            <span style="font-size: 200%; padding-right:2.5%; display:inline-block" class="icon ethicon"></span>
+            <p id="totalbalineth" style="font-size: 200%; display:inline-block;">2.134</p>
+            <p id="totalbalinusd" style="color:#818181; margin-top:-2%; font-size:100%; ">($7,654)
+            </p>
+        </center>
+
+        <div style=" margin-top:4%; display:none;" class="vertcenter" id="walletbuttons">
+            <button class="bluebutton iconbtn"
+                style="margin-right:5%; font-size:80%; padding:10px; padding-right:3%"><span
+                    class="icon buysmallicon">Buy</span></button>
+            <button class="bluebutton iconbtn" style="font-size:80%; padding:10px; padding-right:3.2%"
+                onclick="sendtokens()"><span class="icon sendicon">Send</span></button>
+            <button class="bluebutton iconbtn" style="margin-left:5%;font-size:80%; padding:10px; padding-right:3.2%"
+                onclick="swaptokens()"><span class="icon swapicon">Swap</span></button>
+        </div>
+
+    </div>
+    <br>
+    <div id="balances" style=" border-radius:12.5px; padding:2.5%; " class="containerdivs">
+        {{!-- <p style="color: #818181; font-size:80%">Assets</p>
+        <div style="border-radius:25px;  margin-right:20%; margin-left:20%;">
+
+            <div style="position: relative;">
+                <div id="piechart"></div>
+
+                <center>
+                    <p class="centerlabel" style="font-size: 60%; color:#808080">Assets<br> Allocation</p>
+                </center>
+            </div>
+        </div> --}}
+        <div id="balancestitle">
+            <p style="color:#818181; font-size:80%; margin-bottom:1%"><button class="headingbutton">Total
+                    Assets</button>
+            </p>
+        </div>
+        <div style="padding-left:0%;padding-right:0%">
+
+            <div style="display: flex;">
+                <div id="ethbalance" class="walletassets vertcenter">
+                    <div style="width: 80%">
+                        <p style="color:white; font-size:100%">Ethereum </p>
+                        <p style="font-size:60%; color:#818181;">ETH</p>
+                    </div>
+
+                    <div style="width: 20%">
+                        <p id="ethbal" style="font-size: 100%; float:right;  margin-right:12.5%" class="icon ethicon">
+                            1.23</p>
+                        <p id="ethbalinusd" style="font-size: 75%; color:#808080; float:right">$4,321</p>
+                    </div>
+                </div>
+
+
+                <div id="wethbalance" class="walletassets vertcenter">
+                    <div style="width: 80%">
+                        <p style="color:white; font-size:100%; ">Wrapped Ethereum</p>
+                        <p style="font-size:60%; color:#818181;">WETH</p>
+
+                    </div>
+                    <div style="width: 20%;">
+                        <p id="wethbal" style="font-size: 100%; float:right; margin-right:12.5%" class="icon wethicon">
+                            0.69</p>
+                        <p id="wethbalinusd" style="font-size: 75%; color:#808080; float:right">$2,572</p>
+                    </div>
+                </div>
+            </div>
+            <div style="display: flex;">
+                <div id="usdtbalance" class="walletassets vertcenter">
+                    <div style="width: 80%">
+                        <p style="color:white; font-size:100%">Tether</p>
+                        <p style="font-size:60%; color:#818181;">USDT</p>
+
+                    </div>
+                    <div style="width:20%;">
+                        <p id="usdtbal" style="font-size: 100%; float:right" class=" usdticon">2,572</p>
+                        <p id="usdtbalinusd" style="font-size: 75%; color:#808080; float:right">$2,572</p>
+                    </div>
+
+
+                </div>
+
+                <div id="othersbalance" class="walletassets vertcenter">
+                    <div style="width: 80%">
+                        <p style="color:white; font-size:100%">Others</p>
+                        <p style="font-size:60%; color:#818181;"></p>
+
+                    </div>
+                    <div style="width: 20%">
+                        <p id="otherbal" style="font-size: 100%; float:right; margin-right:12.5%" class="usdicon">4,456
+                        </p>
+                        <p id="otherbalinusd" style="font-size: 75%; color:#808080; float:right">$4,456</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br id="brbal">
+
+    <div id="historicalbalances" style=" border-radius:12.5px; padding:2.5%" class="containerdivs">
+        <p style="color:#818181; font-size:80%; margin-bottom:1%"><button class="headingbutton">ETH Balance over
+                Time</button>
+        </p>
+        <div id="ethbalancechart" style="width :100%"></div>
+        <div style="display: flex;">
+            <div class="walletassets vertcenter">
+                <div style="width: 80%">
+                    <p style="color:white; font-size:90%">Highest ETH Balance</p>
+                    <p style="font-size:60%; color:#818181;"></p>
+                    <p style="color: #808080; font-size:60%"></p>
+                </div>
+                <div style="width: 20%">
+                    <div id="loadinghigh" style="display: none;">
+                        <center><img src="/3.images/loading.gif" width="50%"></center>
+                    </div>
+                    <div id="highvalues" style="display: none;">
+                        <p id="highestethbal" style="font-size: 100%; float:right; margin-right:12.5%" class="ethicon">
+                            -
+                        </p>
+                        <p id="highestethbalinusd" style="font-size: 75%; color:#808080; float:right">-</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="walletassets vertcenter">
+                <div style="width: 80%">
+                    <p style="color:white; font-size:90%">Total Gas Fees Spent</p>
+                    <p style="font-size:60%; color:white;"></p>
+                </div>
+                <div style="width: 20%">
+                    <div id="loadinggas" style="display: none;">
+                        <center><img src="/3.images/loading.gif" width="50%"></center>
+                    </div>
+                    <div id="gasvalues" style="display: none;">
+                        <p id="totalgasfees" style="font-size: 100%; float:right; margin-right:12.5%" class="ethicon">
+                            -
+                        </p>
+                        <p id="totalgasfeesinusd" style="font-size: 75%; color:#808080; float:right">-</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

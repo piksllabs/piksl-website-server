@@ -1,0 +1,23 @@
+<div id="listings" style="border-radius: 12.5px; padding: 2.5%; " class="containerdivs">
+    <div style="display: flex;" class="pointer" onclick="togglediv('listings');">
+        <div style="width: 90%;">
+            <p style="color: #808080; font-size: 80%;"><button class="headingbutton">Listings</button></p>
+        </div>
+        <div style="width :10%; margin-top: 1%;">
+            <i style=" float:right; color: #808080; " class="arrowdark down" id="listingsarrow"></i>
+        </div>
+    </div>
+    <div id="listingsdiv" style="display: block;">
+        <p style="font-size:100%; color:#808080; display:none" id="nolistingsp">There are currently no
+            listings on this item</p>
+        <table id="listingstable">
+            <tr>
+                <th>PRICE</th>
+                <th>PRICE(USD)</th>
+                <th>EXPIRATION</th>
+                <th>FROM</th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+</div>

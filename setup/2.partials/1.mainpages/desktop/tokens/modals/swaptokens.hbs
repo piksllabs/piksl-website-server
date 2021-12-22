@@ -1,0 +1,95 @@
+<div id="swaptokens" style="display: none;">
+    <div style="display: flex;">
+        <div style="width: 90%;">
+            <p style="color: #808080;">Swap from</p>
+        </div>
+        <div style="width: 10%; margin-top:1%; margin-right:1%;">
+            <div id="maxswapdiv">
+                <a id="maxswapeth" class="bluelink" style="font-size:80%; float:right; ">MAX</a>
+                <img src="/3.images/loading.gif" id="maxloadimgswap" style="float:right; display:none" width="50%">
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div style="width: 35%;">
+            <select id="currencyinput1" name="currency"
+                style="width: 100%; padding: 12px; padding-right: 12%;  border-radius: 12.5px; justify-items: center; background: transparent; border: 1px solid #808080; color: white;">
+                <option value="eth"
+                    style="background-color: #202020; border: 1px solid #808080; padding:12px; color: white;">
+                    ETH (&#926;)</option>
+                <option value="weth"
+                    style="background-color: #202020; border: 1px solid #808080; padding:12px; color: white;">
+                    WETH (&#926;)</option>
+            </select>
+        </div>
+        <div style="width: 65%; padding-left:2.5%">
+            <form>
+                <input oninput="inusd('swapinput1amount')" autocomplete="off" type="text" id="swapinput1amount"
+                    name="swapinput1amount" placeholder="Amount"
+                    style="text-align: center;padding:14px; width: 75px; background-color: transparent; border: 1px solid #808080; color: white; width: 100%;   border-radius: 12.5px;">
+            </form>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div style="width: 90%;">
+            <p id="balanceinput1" style="color: #808080; font-size:100%; margin-right:1%; margin-top:1%"></p>
+        </div>
+        <div style="width: 10%;  margin-top:1%;">
+            <p id="swapinput1amountinusd" style="color: #808080; font-size:80%; float:right; margin-right:1%;"></p>
+        </div>
+    </div>
+    <br>
+
+    <p style="color: #808080;">Swap to</p>
+    <div style="display: flex;">
+        <div style="width: 35%;">
+            <select id="currencyinput2" name="currency"
+                style="width: 100%; padding: 12px; padding-right: 12%;  border-radius: 12.5px; justify-items: center; background: transparent; border: 1px solid #808080; color: white;">
+                <option value="weth"
+                    style="background-color: #202020; border: 1px solid #808080; padding:12px; color: white;">
+                    WETH (&#926;)</option>
+                <option value="eth"
+                    style="background-color: #202020; border: 1px solid #808080; padding:12px; color: white;">
+                    ETH (&#926;)</option>
+            </select>
+        </div>
+        <div style="width: 65%; padding-left:2.5%">
+            <form>
+                <input oninput="inusd('swapinput2amount')" autocomplete="off" type="text" id="swapinput2amount"
+                    name="wethamount" placeholder="Amount"
+                    style="text-align: center;padding:14px; width: 75px; background-color: transparent; border: 1px solid #808080; color: white; width: 100%;   border-radius: 12.5px;">
+            </form>
+        </div>
+    </div>
+    <div style="display: flex;">
+        <div style="width: 90%;">
+            <p id="balanceinput2" style="color: #808080; font-size:100%; margin-right:1%; margin-top:1%"></p>
+        </div>
+        <div style="width: 10%;  margin-top:1%;">
+            <p id="swapinput2amountinusd" style="color: #808080; font-size:80%; float:right; margin-right:1%;"></p>
+        </div>
+    </div>
+
+    <br>
+    <div style="display: none; padding-bottom:2.5%" id="swapgasfees">
+        <br>
+        <div style="width: 90%;s">
+            <p style="color: #808080;">Estimated Gas Fees</p>
+            <p style="color: #FE6579; font-size:90%">Likely in 30 seconds</p>
+        </div>
+        <div style="width: 10%;">
+
+            <p style=" float:right; font-size:90%" id="swapgaspriceineth">0.023&#926;</p>
+            <p style="color: #808080; font-size:90%; float:right" id="swapgaspriceinusd">$56.87</p>
+        </div>
+    </div>
+    <center id="swaperrorbox" style="display: none;">
+        <br>
+        <p id="swaperror" style="color: #FE6579; font-size:90%;"><br>Enter valid listing amount</p>
+    </center>
+    <br>
+    <div style="display: flex;" class="vertcenter">
+        <button class="bluebutton" onclick="swapnow();" style="margin-left: 1%;">Swap Tokens</button>
+    </div>
+
+</div>

@@ -1,0 +1,39 @@
+</head>
+
+<body>
+    {{> 0.layout/global/header}}
+    <h1 id="">Mint</h1>
+    <input type="number" placeholder="Qty" id="qty" value="1" />
+    <input class="logininput" style="width: 100%;" type="password" id="mintpassword" placeholder="" /><br>
+
+    <button onclick="minttokens()">Mint</button>
+
+
+
+
+    <script>
+        const currentDate = new Date();
+        let timestamp = parseInt((currentDate.getTime()) / 1000);
+        console.log(timestamp)
+
+        let onehour = (60 * 60);
+        console.log("onehour : " + onehour)
+
+        let sixhours = (6 * 60 * 60);
+        console.log("sixhours : " + sixhours)
+
+        let oneday = (24 * 60 * 60);
+        console.log("oneday : " + oneday)
+
+        let threedays = (3 * 24 * 60 * 60);
+        console.log("threedays : " + threedays)
+
+        let oneweek = (7 * 24 * 60 * 60);
+        console.log("oneweek : " + oneweek)
+
+        let onemonth = (4 * 7 * 24 * 60 * 60);
+        console.log("onemonth : " + onemonth)
+
+        let sixmonths = (6 * 4 * 7 * 24 * 60 * 60);
+        console.log("sixmonths : " + sixmonths)
+    </script>

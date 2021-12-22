@@ -1,0 +1,171 @@
+<div id="editgasfees" style="display: none;">
+
+
+
+
+    {{!--
+    <hr class="solid" style="color : #414141; border-radius: 5px; border:1px solid #414141"> --}}
+    <div style="display:flex">
+        <div class="gasboxes pointer" id="lowgasbox" onclick="uncheck('gaslowradio')">
+            <center>
+                <p style="font-size: 200%;" id="gaslow">76</p>
+                <p style="color: #808080; font-size:90%" id="gaslowinusd">$42.45</p>
+                <input type="radio" style="background:#808080;" id="gaslowradio" name="gas">
+                <p style="color: #808080;">LOW</p>
+            </center>
+        </div>
+        <div class="gasboxes pointer" id="avrgasbox" onclick="uncheck('gasaverageradio')">
+            <center>
+                <p style="font-size: 200%;" id="gasaverage">82</p>
+                <p style="color: #808080; font-size:90%" id="gasaverageinusd">$48.23</p>
+                <input type="radio" style="background:#808080;" id="gasaverageradio" name="gas">
+                <p style="color: #808080;">AVERAGE</p>
+            </center>
+        </div>
+        <div class="gasboxes pointer" id="highgasbox" onclick="uncheck('gashighradio')">
+            <center>
+                <p style="font-size: 200%;" id="gashigh">88</p>
+                <p style="color: #808080; font-size:90%" id="gashighinusd">$53.32</p>
+                <input type="radio" style="background:#808080;" id="gashighradio" name="gas">
+                <p style="color: #808080;">HIGH</p>
+            </center>
+        </div>
+    </div>
+    <br>
+    <center>
+        <p style=" font-size:100%" id="gastime">Likely in 30 seconds</p>
+    </center>
+    <br>
+    <br>
+    <center>
+        <div style="display: flex;" class="vertcenter">
+            <button id="gaspriceestimationconfirmbutton" onclick="gobackgas();" class="whitebtn"
+                style="border-radius: 50px; margin-right:1%; background:transparent; color:#2081E2; border:2px solid #2081E2">Back</button>
+            <button id="gaspriceestimationconfirmbutton" onclick="gobackgas();" class="buybtn"
+                style="border-radius: 50px; margin-left:1%">Save</button>
+        </div>
+    </center>
+
+</div>
+
+
+<script>
+    let gaslow = document.getElementById("gaslowradio");
+    let gasavr = document.getElementById("gasaverageradio");
+    let gashigh = document.getElementById("gashighradio");
+    let gastime = document.getElementById("gastime");
+    document.getElementById("avrgasbox").style.backgroundColor = "#414141";
+    document.getElementById("gasaverageradio").checked = true;
+
+    function uncheck(input) {
+        document.getElementById(input).checked = true;
+
+        if (input == "gaslowradio") {
+            gastime.innerHTML = "Maybe in 30 seconds"
+            gastime.style.color = "#c72e2e";
+            document.getElementById("lowgasbox").style.backgroundColor = "#414141";
+            document.getElementById("highgasbox").style.backgroundColor = "transparent";
+            document.getElementById("avrgasbox").style.backgroundColor = "transparent";
+        }
+        else if (input == "gashighradio") {
+            gastime.innerHTML = "Very likely in 15 seconds"
+            gastime.style.color = "#2081E2";
+            document.getElementById("lowgasbox").style.backgroundColor = "transparent";
+            document.getElementById("highgasbox").style.backgroundColor = "#414141";
+            document.getElementById("avrgasbox").style.backgroundColor = "transparent";
+        }
+        else {
+            gastime.innerHTML = "Likely in 30 seconds"
+            gastime.style.color = "#2081E2";
+            document.getElementById("lowgasbox").style.backgroundColor = "transparent";
+            document.getElementById("highgasbox").style.backgroundColor = "transparent";
+            document.getElementById("avrgasbox").style.backgroundColor = "#414141";
+        }
+    }
+
+
+
+    async function editgasfees() {
+        showmodal("loadingmodal");
+        document.getElementById("modalsubheading").innerHTML = "Edit Gas Price"
+        await changegasprice();
+        showmodal("editgasfees");
+    }
+
+
+    async function gobackgas() {
+        showmodal("gaspriceestimation");
+    }
+
+    async function changegasprice() {
+        let result = await (await fetch("https://www.etherchain.org/api/gasPriceOracle")).json();
+        console.log(result)
+        let { currentBaseFee, recommendedBaseFee } = result
+        changepricegasdiv(currentBaseFee, recommendedBaseFee);
+    }
+
+    function changepricegasdiv(a1, b1) {
+        let currentbasefee = a1;
+        let recommendedbasefee = b1;
+
+        let a = currentbasefee;
+        let b = currentbasefee + ((recommendedbasefee - currentbasefee) / 2)
+        let c = recommendedbasefee
+        let lowbasefee = (a + b) / 2;
+        let avrbasefee = b;
+        let highbasefee = (b + c) / 2;
+        console.log(currentbasefee, recommendedbasefee)
+
+        let gaslowprice = document.getElementById("gaslow");
+        let gasavrprice = document.getElementById("gasaverage");
+        let gashighprice = document.getElementById("gashigh");
+
+        gaslowprice.innerHTML = parseInt(lowbasefee);
+        gasavrprice.innerHTML = parseInt(avrbasefee);
+
+        gashighprice.innerHTML = parseInt(highbasefee);
+
+
+    }
+
+    async function getcurrentgasprice() {
+        let result = await (await fetch("https://www.etherchain.org/api/gasPriceOracle")).json();
+        console.log(result)
+        let { currentBaseFee, recommendedBaseFee } = result;
+
+        let currentbasefee = currentBaseFee;
+        let recommendedbasefee = recommendedBaseFee;
+
+        let a = currentbasefee;
+        let b = currentbasefee + ((recommendedbasefee - currentbasefee) / 2)
+        let c = recommendedbasefee
+        let lowbasefee = (a + b) / 2;
+        let avrbasefee = b;
+        let highbasefee = (b + c) / 2;
+        return avrbasefee;
+
+    }
+
+
+
+
+</script>
+
+<style>
+    .gasboxes {
+        width: 33%;
+        border-radius: 25px;
+        margin: 2.5%;
+        padding-top: 2.5%;
+        padding-bottom: 2.5%;
+        border: 2px solid #414141;
+    }
+
+    .gasboxes:hover {
+        background-color: #414141;
+    }
+
+    #gastime {
+        color: #FE6579;
+    }
+</style>

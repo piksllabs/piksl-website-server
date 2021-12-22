@@ -1,0 +1,66 @@
+<div id="makeoffer" style="display: none;">
+
+  <center>
+    <p style="color: #808080; font-size:90%">Offers must use Wrapped Ether(WETH)</p>
+  </center>
+  <br>
+  <div style="display: flex;">
+    <div style="width: 90%;">
+      <p style="color: #808080;">Offer amount</p>
+    </div>
+    <div style="width: 10%; margin-top:1%; margin-right:1%;">
+      <a id="maxofferweth" class="bluelink" style="font-size:80%; float:right; ">MAX</a>
+    </div>
+  </div>
+
+  <div style="display: flex;">
+    <div style="width: 35%;">
+      <select id="currency" name="currency"
+        style="width: 100%; padding: 12px; padding-right: 12%;  border-radius: 12.5px; justify-items: center; background: transparent; border: 1px solid #808080; color: white;">
+        <option value="saab" style="background-color: #202020; border: 1px solid #808080; padding:12px; color: white;">
+          WETH (&#926;)</option>
+      </select>
+    </div>
+    <div style="width: 65%; padding-left:2.5%">
+      <form>
+        <input oninput="inusd('makeofferamount')" autocomplete="off" type="text" id="makeofferamount"
+          name="makeofferamount" placeholder="Amount"
+          style="text-align: center;padding:14px; width: 75px; background-color: transparent; border: 1px solid #808080; color: white; width: 100%;   border-radius: 12.5px;">
+      </form>
+    </div>
+  </div>
+  <div style="display: flex;">
+    <div style="width: 90%;">
+      <p id="makeofferbalanceweth" style="color: #808080; font-size:100%; margin-right:1%; margin-top:1%"></p>
+    </div>
+    <div style="width: 10%;  margin-top:1%;">
+      <p id="makeofferamountinusd" style="color: #808080; font-size:80%; float:right; margin-right:1%;"></p>
+    </div>
+  </div> <br>
+  <p style="color: #808080;">Duration</p>
+  <select id="makeoffertimeframe" name="timeframe"
+    style="width: 100%; padding: 12px; padding-right: 12%;  border-radius: 12.5px; justify-items: center; background: transparent; border: 1px solid #808080; color: white;">
+    <option value="14515200" name="14515200" class="timeframeoptions">6 months</option>
+    <option value="2419200" name="2419200" class="timeframeoptions">1 month</option>
+    <option value="604800" name="604800" class="timeframeoptions">1 week</option>
+    <option value="259200" name="259200" class="timeframeoptions">3 days</option>
+    <option value="86400" name="86400" class="timeframeoptions">1 day</option>
+    <option value="21600" name="21600" class="timeframeoptions">6 hours</option>
+    <option value="3600" name="3600" class="timeframeoptions">1 hour</option>
+  </select>
+  <br><br>
+  <center>
+    <p id="processofferp" style="color: #808080; display:block;">Continue to process your offer</p>
+  </center>
+  <center>
+    <p id="insufficienterror" style="color: #2081e2; font-size:90%; display: none;">Offer amount is greater than your
+      available WETH balance.</p>
+  </center>
+  <br>
+  <div style="display: flex;" class="vertcenter">
+    <button id="continuemakeoffer" class="bluebutton" onclick="continuemakeoffer();"
+      style="margin-right: 1%; border-radius:50px; border:2px solid #2081E2">Continue</button>
+    <button class="bluebuttonhollow" onclick="wrapether();" style="margin-left: 1%;">Wrap Ether</button>
+  </div>
+
+</div>

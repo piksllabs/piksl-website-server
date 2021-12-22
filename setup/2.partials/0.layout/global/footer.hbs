@@ -1,0 +1,130 @@
+<div id="desktopfooter" style="display: block;">
+    <div id="upperfooter" style="display: flex;">
+        <div style="width: 100%;" class="vertcenter">
+            <marquee scrollamount="10">#TeamPiksl</marquee>
+        </div>
+
+    </div>
+    <div id="lowerfooter" style=" display:flex;">
+        <div style="width:50%">
+            <div id="main">
+                <div style="display: flex;">
+                    <div id="pages" style="width:50%">
+                        <p class="navcats">Pages</p>
+                        <a href="/">
+                            <p class="navlinks">Home</p>
+                        </a>
+                        <a href="/dripclub">
+                            <p class="navlinks">Piksl Originals</p>
+                        </a>
+                        <a href="/marketplace">
+                            <p class="navlinks">Marketplace</p>
+                        </a>
+                        <a href="/fashion">
+                            <p class="navlinks">Fashion</p>
+                        </a>
+                        <a href="/roadmap">
+                            <p class="navlinks">Roadmap</p>
+                        </a>
+                    </div>
+
+                    <div id="links" style="width:50%">
+
+                        <p class="navcats">Resources</p>
+
+                        <a href="">
+                            <p class="navlinks">Privacy Policy</p>
+                        </a>
+                        <a href="">
+                            <p class="navlinks">Terms of Service</p>
+                        </a>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+            <br>
+            <div id="copy">
+                <p style="font-size: 80%; color:#808080">contact@piksl.io</p>
+                <p style="font-size: 80%; color:#808080">&copy; Piksl Labs, 2021</p>
+            </div>
+        </div>
+
+        <div id="mailing" style="width:50%">
+
+
+            <div id="social">
+                <div id="join" style="width: 50%;">
+                    <p style="font-size: 90%; font-weight: bold;">Join the Piksl community</p>
+
+
+                    <div id="socialbtns" style="display: flex; margin-top:1%">
+                        <a href="https://twitter.com/piksllabs" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://discord.gg/bjGpSXWgH2" target="_blank" style="margin-left: 2%;"><i
+                                class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div style="padding-top: 5%;">
+                    <p style="font-size: 90%; font-weight: bold;">Stay in the loop</p>
+                    <p style="font-size: 80%; color:#808080;">Join our mailing list to stay in the loop :</p>
+                    <div id="emailbar" style="display: flex;">
+                        <div class="vertcenter">
+                            <input class="logininput" type="text" placeholder="E-mail"
+                                style="padding:12.5px; font-size:80%; border:1px solid #808080;">
+                        </div>
+                        <div class="vertcenter" style="margin-left: 2%;">
+                            <button class="bluebutton">Enter</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+<div id="mobilefooter" style="display: none;  ">
+
+</div>
+
+<script>
+
+    window.addEventListener('load', async function () {
+
+
+
+        if (window.innerWidth < 767) {
+            document.getElementById("desktopfooter").style.display = "none";
+            document.getElementById("mobilefooter").style.display = "block";
+            let center = document.createElement("center");
+            let center2 = center.cloneNode();
+            center2.style.fontSize = "110%";
+            $("#upperfooter").appendTo(center2);
+
+            $("#join").appendTo(center2);
+
+            $(center2).appendTo("#mobilefooter");
+            document.getElementById("upperfooter").style.fontSize = "110%";
+            document.getElementById("join").style.width = "100%";
+            document.getElementById("join").style.paddingTop = "10%";
+            document.getElementById("join").style.paddingBottom = "10%";
+            document.getElementById("socialbtns").className = "vertcenter";
+            $("#main").appendTo(center2);
+            document.getElementById("main").style.paddingLeft = "10%";
+            document.getElementById("main").style.paddingRight = "10%";
+            document.getElementById("main").style.paddingBottom = "10%";
+            $("#copy").appendTo(center2);
+            document.getElementById("copy").style.paddingBottom = "10%";
+
+
+
+
+        }
+    });
+</script>

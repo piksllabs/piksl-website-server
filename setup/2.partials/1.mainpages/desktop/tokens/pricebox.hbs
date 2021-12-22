@@ -1,0 +1,49 @@
+<div class="containerdivs" id="pricesale" style="border-radius: 12.5px; padding: 2.5%; ">
+
+    {{!-- On sale --}}
+    <div id="currentpriceonsale" style="display: none;">
+        <p style="color: #808080; font-size: 80%;"><button class="headingbutton">Current Price</button></p> <span
+            style="font-size: 200%; display: inline-block; padding-right:1%" class="icon ethicon"></span>
+        <p id="currentprice" style="font-size: 200%; display: inline-block;">2.5</p>
+        <p id="currentpriceinusd" style="display: inline-block; color: #808080;">
+            &nbsp;&nbsp;($11,729)</p>
+
+        <div style="height:10px;" aria-hidden="true" class="wp-block-spacer"></div>
+        {{!-- notownerbuybutton --}}
+        <div id="notownerbuybuttons" style="display: block;">
+            <button class="bluebutton iconbtn" onclick="buytoken('currentprice');" style=""><span
+                    class="icon buyicon">Buy Now</span></button>
+            <button class="whitebuttonhollow iconbtn" style="" onclick="sell('makeoffer');"><span
+                    class="icon offericon">Make Offer</span></button>
+        </div>
+        {{!-- ownerbuybuttons --}}
+        <div id="ownerbuybuttons" style="display: none;">
+            <button class="bluebutton iconbtn" onclick="sell('changeprice');" style=""><span
+                    class="icon lowerpriceicon">Lower
+                    Price</span></button>
+            <button class="whitebuttonhollow iconbtn" onclick="cancellisting('currentprice');" style=""><span
+                    class="icon cancelicon">Cancel Listing</span></button>
+        </div>
+    </div>
+
+    {{!-- Not on sale --}}
+    <div id="currentpricenotonsale" style="display: block;">
+        <p style="color: #808080; font-size: 80%;"><button class="headingbutton">Current Price</button></p>
+        <p style="display: inline-block; color: #808080;">This item is currently not listed.</p>
+
+        <div style="height:10px;" aria-hidden="true" class="wp-block-spacer"></div>
+        {{!-- ownersellbutton --}}
+        <div id="ownersellbuttons" style="display: none;">
+            <button class="bluebutton iconbtn" onclick="sell('sell');" style="padding-right:3.25%;"><span
+                    class="icon sellicon">Sell
+                </span></button>
+        </div>
+        {{!-- notownersellbutton --}}
+        <div id="notownersellbuttons" style="display: block;">
+            <button id="makeoffersolo" class="bluebutton iconbtn" onclick="sell('makeoffer');"><span
+                    class="icon blueoffericon">Make
+                    Offer</span></button>
+        </div>
+        {{!-- <button class="normalbtn whitebtn notworking">Change Price</button> --}}
+    </div>
+</div>

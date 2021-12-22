@@ -1,0 +1,94 @@
+<script src="/2.js/desktop/mainpages/marketplace/marketplace.js"></script>
+<script src="/2.js/desktop/mainpages/marketplace/createlistings.js"></script>
+<script src="/2.js/desktop/mainpages/marketplace/filter.js"></script>
+<script src="/2.js/desktop/mainpages/marketplace/populate.js"></script>
+<script src="/2.js/desktop/mainpages/marketplace/sidebar.js"></script>
+<script src="/2.js/desktop/mainpages/marketplace/mobilemarketplace.js"></script>
+<script src="/2.js/desktop/mainpages/tokens/smallfunctions/togglebox.js"></script>
+
+
+<link rel="stylesheet" href="/1.css/desktop/1.mainpages/marketplace/marketplace.css">
+</head>
+
+<body id="body">
+    {{> 0.layout/global/header}}
+    <div id="desktop">
+
+        <div id="loading"> <img id="loadingimg" src="/3.images/loading.gif" width="4%" style="display: none; ">
+        </div>
+        <div id="upper" style="display:none;">
+
+            {{> 1.mainpages/desktop/marketplace/collectioninfo}}
+            <div id="collectioncards">
+                <br>
+                <div id="colmain"
+                    style="display: flex;  justify-content: space-around;align-items: flex-start;overflow: visible; ">
+                    {{> 1.mainpages/desktop/marketplace/sidebar}}
+
+                    <div id="loadcol" style="width:80%; padding-left: 1.5%; padding-right: 1.5%; display:none;">
+                        <center><img id="loadcolimg" src="/3.images/loading.gif" width="4%" style="display: block; ">
+                        </center>
+                    </div>
+                    <div id="maincollection" style="width:80%; padding-left: 1.5%; padding-right: 1.5%;">
+                        <div id="buttons" style="display: flex; padding-left:1%; flex-wrap: wrap;">
+                        </div>
+                        <div id="coltable" class="coltable" style=" display:block;">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <br><br>
+        </div>
+
+    </div>
+    <!---Desktop Site-->
+
+
+
+
+
+
+
+
+
+
+    <!---Mobile Site-->
+    <div id="mobile">
+        <div id="uppermobile" style="display: none;">
+            <div id="upperinnermobile">
+
+            </div>
+        </div>
+    </div>
+    <!---Mobile Site-->
+    {{> 0.layout/global/footer}}
+
+
+    <div id="buysellmodal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="font-size:80%; padding-left:4%; padding-right:4%;">
+            <span id="buysellclosebtn" class="closebtn">&times;</span>
+            <center>
+
+                <p style="font-size: 250%;" id="modalheading">SELL</p>
+
+
+
+                <button id="modalsubheading"
+                    style="padding: 10px; border:2px solid #b48948; color:#b48948; background:transparent; border-radius:50px; font-size:90%; padding-bottom:12px">
+                    LIST ITEM FOR SALE
+                </button>
+                <br><br>
+            </center>
+
+            <div id="modalbody">
+                {{!-- buy --}}
+                {{> 1.mainpages/desktop/tokens/modals/notactive}}
+
+            </div>
+        </div>
+    </div>

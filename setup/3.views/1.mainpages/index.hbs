@@ -1,0 +1,51 @@
+<link rel="stylesheet" href="/1.css/desktop/1.mainpages/index/index.css">
+<script src="/2.js/desktop/mainpages/index/index.js"></script>
+<script src="/2.js/desktop/mainpages/index/mobileindex.js"></script>
+
+
+</head>
+
+<body style="background-color: #111111;">
+    {{> 0.layout/global/header}}
+    <div id="desktop" style="padding-bottom: 2.5%;">
+        <div id="outer">
+            <div id="hero" style="background-color: #111111;">
+
+                <center>
+                    <div style=" padding-top: 4.5%; padding-bottom:2.5%">
+
+                        <p id="dripclubheading" style="font-size: 650%; " class="neonText" data-heading="DRIP CLUB">DRIP
+                            CLUB
+                        </p>
+                        <p id="dripclubsubheading" style="font-size: 150%; margin-top:-1.5%" class="neonText"
+                            data-heading="DRIP CLUB">
+                            The first collection of 10,000 Piksl characters.
+                        </p>
+                        <a href="/dripclub"><button class="bluebutton" style="margin-top: 1%;">Learn more</button></a>
+                    </div>
+                    <img id="heroimg" src="3.images/herobanner.png" width="80%">
+                </center>
+
+            </div>
+
+            <div id="upper" style=" padding-right:2.5%; padding-left:2.5%;  background-color: #111111;">
+                <br>
+                <div id="outermain" style="">
+                    {{> 1.mainpages/desktop/index/div1}}
+                    {{> 1.mainpages/desktop/index/div2}}
+                    {{> 1.mainpages/desktop/index/div3}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!---Desktop Site-->
+
+
+    <!---Mobile Site-->
+    <div id="mobile">
+
+    </div>
+    <!---Mobile Site-->
+    {{> 0.layout/global/footer}}
+</body>

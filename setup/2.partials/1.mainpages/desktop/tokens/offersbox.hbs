@@ -1,0 +1,28 @@
+<div id="offers" style=" border-radius: 12.5px; padding: 2.5%; " class="containerdivs">
+    <div style="display: flex;" class="pointer" onclick="togglediv('offers');">
+        <div style="width: 90%;">
+            <p style="color: #808080; font-size: 80%;"><button class="headingbutton">Offers</button></p>
+        </div>
+        <div style="width :10%; margin-top: 1%;">
+            <i style=" float:right; color: #808080; " class="arrowdark down" id="offersarrow"></i>
+        </div>
+    </div>
+    <div id="offersdiv" style="display: none;">
+        <p style="font-size:100%; color:#808080; display:none" id="nooffersp">There are currently no
+            offers on this item</p>
+        <table id="offerstable">
+            <tr>
+                <th>PRICE</th>
+                <th>PRICE(USD)</th>
+                <th>EXPIRATION</th>
+                <th>FROM</th>
+                <th></th>
+            </tr>
+        </table>
+        <div id="offersloading">
+            <br>
+            <center><img src="/3.images/loading.gif" width="5%" style=""></center>
+            <br>
+        </div>
+    </div>
+</div>

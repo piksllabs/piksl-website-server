@@ -1,0 +1,34 @@
+<div id="loginmodal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content" style="font-size:80%">
+        <span id="loginclosebtn" class="closebtn">&times;</span>
+        <center>
+            <p style="font-size: 250%;"><strong>SIGN IN</strong></p><br>
+
+            <p>Sign in using Piksl Wallet</p>
+
+            <form id="loginform" style="border-radius: 50px;">
+                <input class="logininput" type="text" id="loginusername" placeholder="E-mail/Username"><br>
+                <input class="logininput" type="password" id="loginpassword" placeholder="Password"><br>
+                <p style="font-size:80%">Don't have an account? <a href="/register" class="bluelink">Sign up</a></p><br>
+            </form>
+            <center>
+                <div id="loginerror" class="vertcenter" style="display: none;">
+                    <i class="material-icons" style="padding-right:1%;font-size:90%;color:#c72e2e">warning</i>
+                    <p id="loginerrormsg" style="color: #c72e2e;">Incorrect username or password</p>
+                </div>
+            </center>
+            <button class="bluebutton" style="border-radius:50px; margin-top:2.5%"
+                onclick="loginuser()">Continue</button><br>
+            <br>
+            <p style="color: #808080;">-OR-</p><br>
+            <button class="graybutton" style="border-radius:50px; display:flex; margin-top:-2.5%"
+                onclick="connectMetamask()"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/3/36/MetaMask_Fox.svg" width="35px"
+                    style="padding-right: 5%;">
+                <p style="margin-top:1.5% ;">Connect Metamask &nbsp;</p>
+            </button>
+        </center>
+    </div>
+</div>
