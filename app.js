@@ -1,64 +1,86 @@
-const express = require('express');
-const app = express();
-const { engine } = require("express-handlebars");
-require('dotenv').config();
+require("dotenv").config();
+const express = require("express");
+const PORT = process.env.PORT;
+const cluster = require("cluster");
+const totalCPUs = require("os").cpus().length;
 
-//Setup
-const PORT = process.env.PORT
-app.use(express.static(__dirname + '/setup/1.resources'))
-    //HBS setup
-app.engine('.hbs', engine({
-    extname: '.hbs',
-    defaultLayout: __dirname + '/setup/3.views/0.layout/defaultlayout',
-    partialsDir: __dirname + '/setup/2.partials'
-}));
-app.set('view engine', '.hbs');
-app.set("views", "./setup/3.views");
+if (cluster.isMaster) {
+    console.log(`Number of CPUs is ${totalCPUs}`);
+    console.log(`Master ${process.pid} is running`);
 
-//Website Render
-//Main Render
-app.get('/', (req, res) => {
-    res.render('1.mainpages/index')
-});
+    // Fork workers.
+    for (let i = 0; i < totalCPUs; i++) {
+        cluster.fork();
+    }
 
-app.get('/marketplace', (req, res) => {
-    res.render('1.mainpages/marketplace')
-});
+    cluster.on("exit", (worker, code, signal) => {
+        console.log(`worker ${worker.process.pid} died`);
+        console.log("Let's fork another worker!");
+        cluster.fork();
+    });
+} else {
 
-app.get('/dripclub/tokenid=*', (req, res) => {
-    res.render('1.mainpages/tokens')
-});
+    const app = express();
+    const { engine } = require("express-handlebars");
 
-app.get('/dashboard', (req, res) => {
-    res.render('2.extrapages/dashboard')
-});
+    //Setup
 
-app.get('/mint', (req, res) => {
-    res.render('2.extrapages/mint')
-});
+    app.use(express.static(__dirname + '/setup/1.resources'))
+        //HBS setup
+    app.engine('.hbs', engine({
+        extname: '.hbs',
+        defaultLayout: __dirname + '/setup/3.views/0.layout/defaultlayout',
+        partialsDir: __dirname + '/setup/2.partials'
+    }));
+    app.set('view engine', '.hbs');
+    app.set("views", "./setup/3.views");
 
-app.get('/address=*', (req, res) => {
-    res.render('2.extrapages/dashboard')
-});
+    //Website Render
+    //Main Render
+    app.get('/', (req, res) => {
+        res.render('1.mainpages/index')
+    });
 
-app.get('/test', (req, res) => {
-    res.render('2.extrapages/test')
-});
+    app.get('/marketplace', (req, res) => {
+        res.render('1.mainpages/marketplace')
+    });
 
-app.get('/dripclub', (req, res) => {
-    res.render('1.mainpages/dripclub')
-});
+    app.get('/dripclub/tokenid=*', (req, res) => {
+        res.render('1.mainpages/tokens')
+    });
 
-app.get('/fashion', (req, res) => {
-    res.render('1.mainpages/fashion')
-});
+    app.get('/dashboard', (req, res) => {
+        res.render('2.extrapages/dashboard')
+    });
 
-app.get('/roadmap', (req, res) => {
-    res.render('1.mainpages/roadmap')
-});
+    app.get('/mint', (req, res) => {
+        res.render('2.extrapages/mint')
+    });
+
+    app.get('/address=*', (req, res) => {
+        res.render('2.extrapages/dashboard')
+    });
+
+    app.get('/test', (req, res) => {
+        res.render('2.extrapages/test')
+    });
+
+    app.get('/dripclub', (req, res) => {
+        res.render('1.mainpages/dripclub')
+    });
+
+    app.get('/fashion', (req, res) => {
+        res.render('1.mainpages/fashion')
+    });
+
+    app.get('/roadmap', (req, res) => {
+        res.render('1.mainpages/roadmap')
+    });
 
 
-//App Listen
-app.listen(PORT, () => {
-    console.log(`Server running on ${PORT}`)
-});
+    //App Listen
+    app.listen(PORT, () => {
+        console.log(`Server running on ${PORT}`)
+    });
+
+}
