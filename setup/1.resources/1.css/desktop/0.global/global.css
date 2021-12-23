@@ -9,7 +9,7 @@ html {
 body {
     margin-top: 0 !important;
     padding-top: 0 !important;
-    font-family: "Poppins";
+    font-family: "Poppins", "Google Sans", "Fira Sans", "Roboto", Arial, sans-serif;
     background: #111111;
     color: white;
 }

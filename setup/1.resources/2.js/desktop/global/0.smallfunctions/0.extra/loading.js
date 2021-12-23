@@ -11,7 +11,17 @@ function loading() {
 }
 
 function endloading() {
-    document.getElementById("loading").style.display = "none";
-    document.getElementById("upper").style.display = "block";
-    document.getElementById("uppermobile").style.display = "block";
+    try {
+        document.getElementById("loading").style.display = "none";
+    } catch {}
+    try {
+        document.getElementById("upper").style.display = "block";
+    } catch {}
+    try {
+        document.getElementById("uppermobile").style.display = "block";
+    } catch {}
+    try {
+        document.getElementById("body").style.display = "block";
+    } catch {}
+
 }

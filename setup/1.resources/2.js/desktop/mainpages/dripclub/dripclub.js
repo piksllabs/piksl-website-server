@@ -1,6 +1,7 @@
 window.addEventListener('resize', calculate);
 
-window.addEventListener('load', function() {
+window.addEventListener('load', async function() {
+    await endloading();
     calculate();
 });
 
