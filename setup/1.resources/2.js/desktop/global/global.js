@@ -39,3 +39,12 @@ if (window.innerWidth < 960) {
 } else {
     //alert('More than 960');
 }
+
+async function changelogocolor() {
+    document.getElementById("logo").style.cursor = "pointer";
+    document.getElementById("logosvg").style.fill = "#D09E53";
+}
+
+async function changelogocolorback() {
+    document.getElementById("logosvg").style.fill = "white";
+}

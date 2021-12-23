@@ -16,3 +16,7 @@
 
 //     }
 // }
+
+window.addEventListener('load', async function() {
+    await endloading();
+});
