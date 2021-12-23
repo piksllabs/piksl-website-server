@@ -4,6 +4,7 @@ const PORT = process.env.PORT;
 const cluster = require("cluster");
 const totalCPUs = require("os").cpus().length;
 
+
 if (cluster.isMaster) {
     console.log(`Number of CPUs is ${totalCPUs}`);
     console.log(`Master ${process.pid} is running`);
@@ -22,8 +23,11 @@ if (cluster.isMaster) {
 
     const app = express();
     const { engine } = require("express-handlebars");
+    var compression = require('compression');
 
+    app.use(compression());
     //Setup
+    // app.use(compression());
     var options = {
         etag: true,
         maxAge: 3600000,
@@ -31,10 +35,11 @@ if (cluster.isMaster) {
         setHeaders: function(res, path, stat) {
             res.set({
                 'x-timestamp': Date.now(),
-                'joseph': 'hi'
+                'Cache-Control': 'no-cache'
             });
         }
     }
+
 
     app.use(express.static(__dirname + '/setup/1.resources', options));
     //HBS setup
