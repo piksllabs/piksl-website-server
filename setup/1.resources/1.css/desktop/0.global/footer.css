@@ -38,3 +38,7 @@ a {
     padding-right: 25%;
     padding-bottom: 2.5%;
 }
+
+#marquee {
+    overflow: hidden;
+}

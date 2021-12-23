@@ -1,7 +1,7 @@
 <div id="desktopfooter" style="display: block;">
     <div id="upperfooter" style="display: flex;">
         <div style="width: 100%;" class="vertcenter">
-            <marquee scrollamount="10">#TeamPiksl</marquee>
+            <div id="marquee">#TeamPiksl</div>
         </div>
 
     </div>
@@ -100,6 +100,8 @@
 
 
         if (window.innerWidth < 767) {
+            $('#marquee').marquee({ duration: 5000 });
+            document.getElementById("marquee").style.width = window.innerWidth + "px";
             document.getElementById("desktopfooter").style.display = "none";
             document.getElementById("mobilefooter").style.display = "block";
             let center = document.createElement("center");
@@ -125,6 +127,9 @@
 
 
 
+        } else {
+            $('#marquee').marquee({ duration: 15000 });
+            document.getElementById("marquee").style.width = window.innerWidth + "px";
         }
     });
 </script>
