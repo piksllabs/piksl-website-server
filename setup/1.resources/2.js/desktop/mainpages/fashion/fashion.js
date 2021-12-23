@@ -49,11 +49,11 @@ window.addEventListener('load', async function() {
         let center2 = center.cloneNode();
 
         let img1 = document.createElement("img");
-        img1.src = "/3.images/card1.png";
+        img1.src = "https://storage.piksl.io/3.images/card1.png";
         let img2 = document.createElement("img");
-        img2.src = "/3.images/card2.png";
+        img2.src = "https://storage.piksl.io/3.images/card2.png";
         let img3 = document.createElement("img");
-        img3.src = "/3.images/card3.png";
+        img3.src = "https://storage.piksl.io/3.images/card3.png";
         document.getElementById("fashionbanner").innerHTML = "";
         center2.appendChild(img1);
         center2.appendChild(br.cloneNode());

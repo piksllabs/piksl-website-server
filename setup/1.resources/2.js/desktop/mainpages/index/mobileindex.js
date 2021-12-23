@@ -10,7 +10,7 @@ window.addEventListener('load', async function() {
 
         $("#hero").appendTo("#mobile");
 
-        document.getElementById("heroimg").src = "/3.images/back/herobanner2.png";
+        document.getElementById("heroimg").src = "https://storage.piksl.io/3.images/back/herobanner2.png";
         document.getElementById("heroimg").style.width = "100%";
         document.getElementById("dripclubheading").style.fontSize = "650%";
         document.getElementById("dripclubheading").style.lineHeight = "1";

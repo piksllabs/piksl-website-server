@@ -43,13 +43,13 @@ padding: 10px;
 }
 
 .txt {
-    background-image: url("../../../../3.images/logopatterngray.png");
+    background-image: url("https://storage.piksl.io/3.images/logopatterngray.png");
     margin: 1%;
 }
 
 .txt:hover {
     opacity: 0.75;
-    background-image: url("../../../../3.images/logopatterngray.png");
+    background-image: url("https://storage.piksl.io/3.images/logopatterngray.png");
     background-size: cover;
     /* border: 10px solid #FE6579; */
     border-radius: 25px;
@@ -92,7 +92,7 @@ padding-left: 7.5%;
 padding-top: 2.5%;
 padding-bottom: 2.5%; */
     height: 100%;
-    background-image: url("../../../../3.images/back/12.png");
+    background-image: url("https://storage.piksl.io/3.images/back/12.png");
     /* background: url("https://pbs.twimg.com/media/D3FncfUX0AABaWL.png:small"); */
     background-repeat: no-repeat;
     background-size: cover;
@@ -123,12 +123,12 @@ padding-bottom: 2.5%; */
 
 @font-face {
     font-family: "mexcellent";
-    src: url("../../../../3.images/0.extrafiles/mexcellentrg.otf");
+    src: url("https://storage.piksl.io/3.images/0.extrafiles/mexcellentrg.otf");
 }
 
 
 /* #silk {
-    background-image: url("../../../../3.images/back/pikslfashion3.png");
+    background-image: url("../../../..https://storage.piksl.io/3.images/back/pikslfashion3.png");
     background-size: cover;
     background-position: center;
     height: 240px;

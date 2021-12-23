@@ -1,140 +1,144 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<script src="/2.js/desktop/global/1.loginsystem/dashboard.js"></script>
-<script src="/2.js/desktop/global/1.loginsystem/mobiledashboard.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/global/1.loginsystem/dashboard.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/global/1.loginsystem/mobiledashboard.js"></script>
 
-<script src="/2.js/desktop/extrapages/dashboard/ethbalancechart.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/minttokens.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/selltoken.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/changeprice.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/cancellisting.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/buytoken.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/showmodal.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/makeoffer.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/wrapether.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/listingdone.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/smallfunctions/togglebox.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/acceptoffer.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/gasestimation.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/canceloffer.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/swaptokens.js"></script>
-<script src="/2.js/desktop/mainpages/tokens/modals/send.js"></script>
-
-
+<script src="https://storage.piksl.io/2.js/desktop/extrapages/dashboard/ethbalancechart.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/minttokens.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/selltoken.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/changeprice.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/cancellisting.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/buytoken.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/showmodal.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/makeoffer.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/wrapether.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/listingdone.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/smallfunctions/togglebox.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/acceptoffer.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/gasestimation.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/canceloffer.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/swaptokens.js"></script>
+<script src="https://storage.piksl.io/2.js/desktop/mainpages/tokens/modals/send.js"></script>
 
 
 
 
-<link rel="stylesheet" href="/1.css/desktop/2.extrapages/dashboard.css">
+
+
+<link rel="stylesheet" href="https://storage.piksl.io/1.css/desktop/2.extrapages/dashboard.css">
 
 
 </head>
 
 <body>
-    {{> 0.layout/global/header}}
-    <div id="desktop">
-        <div id="loading"> <img id="loadingimg" src="/3.images/loading.gif" width="4%" style="display: none; ">
-        </div>
-        <div id="upper" style="display:none;">
-            <br>
+    <div id="loading" class="vertcenter"> <img id="loadingimg" src="https://storage.piksl.io/3.images/loading.gif"
+            width="4%" style="display: none; ">
+    </div>
+    <div id="body" style="display: none;">
+        {{> 0.layout/global/header}}
+        <div id="desktop">
+
+            <div id="upper" style="display:none;">
+                <br>
 
 
-            <div id="outercontainer" style="margin-left: 2.5%; margin-right:2.5%">
-                <div id="innercontainer" style="display: flex;">
+                <div id="outercontainer" style="margin-left: 2.5%; margin-right:2.5%">
+                    <div id="innercontainer" style="display: flex;">
 
-                    {{> 2.extrapages/desktop/dashboard/mainprofile}}
-                    {{> 2.extrapages/desktop/dashboard/mainwallet}}
-                    {{> 2.extrapages/desktop/dashboard/mainnfts}}
+                        {{> 2.extrapages/desktop/dashboard/mainprofile}}
+                        {{> 2.extrapages/desktop/dashboard/mainwallet}}
+                        {{> 2.extrapages/desktop/dashboard/mainnfts}}
 
-                </div>
-                <br><br>
-
-            </div>
-        </div>
-
-        <div id="buysellmodal" class="modal">
-
-            <!-- Modal content -->
-            <div class="modal-content" style="font-size:80%; padding-left:4%; padding-right:4%;">
-                <span id="buysellclosebtn" class="closebtn">&times;</span>
-                <center>
-
-                    <p style="font-size: 250%;" id="modalheading">SELL</p>
-
-
-
-                    <button id="modalsubheading"
-                        style="padding: 10px; border:2px solid #b48948; color:#b48948; background:transparent; border-radius:50px; font-size:90%; padding-bottom:12px">
-                        LIST ITEM FOR SALE
-                    </button>
+                    </div>
                     <br><br>
-                </center>
 
-                <div id="modalbody">
-                    {{!-- buy --}}
-                    {{> 1.mainpages/desktop/tokens/modals/buy}}
-
-                    {{!-- sell --}}
-                    {{> 1.mainpages/desktop/tokens/modals/sell}}
-
-                    {{!-- change price --}}
-                    {{> 1.mainpages/desktop/tokens/modals/changeprice}}
-
-                    {{!-- Cancel listing --}}
-                    {{> 1.mainpages/desktop/tokens/modals/cancellisting}}
-
-                    {{!-- Request Signature --}}
-                    {{> 1.mainpages/desktop/tokens/modals/requestsignature}}
-
-                    {{!-- Request Password --}}
-                    {{> 1.mainpages/desktop/tokens/modals/requestpassword}}
-
-                    {{!-- Metamask Decline --}}
-                    {{> 1.mainpages/desktop/tokens/modals/metamaskdecline}}
-
-                    {{!-- Listing Confirmed --}}
-                    {{> 1.mainpages/desktop/tokens/modals/listingconfirmed}}
-
-                    {{!-- Loading Modal --}}
-                    {{> 1.mainpages/desktop/tokens/modals/loadingmodal}}
-
-                    {{!-- Gas Price Estimation Modal --}}
-                    {{> 1.mainpages/desktop/tokens/modals/gaspriceestimation}}
-
-                    {{!-- Gas Price Estimation Modal --}}
-                    {{> 1.mainpages/desktop/tokens/modals/editgasfees}}
-
-                    {{!-- Make Offer Modal --}}
-                    {{> 1.mainpages/desktop/tokens/modals/makeoffer}}
-
-                    {{!-- Wrap Ether Modal --}}
-                    {{> 1.mainpages/desktop/tokens/modals/wrapether}}
-
-                    {{!--Empty Modal --}}
-                    {{> 1.mainpages/desktop/tokens/modals/emptymodal}}
-
-                    {{!--Swap Tokens Modal --}}
-                    {{> 1.mainpages/desktop/tokens/modals/swaptokens}}
-
-                    {{!--Send Modal --}}
-                    {{> 1.mainpages/desktop/tokens/modals/send}}
-
-                    {{> 1.mainpages/desktop/tokens/modals/notactive}}
                 </div>
             </div>
 
-        </div>
+            <div id="buysellmodal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content" style="font-size:80%; padding-left:4%; padding-right:4%;">
+                    <span id="buysellclosebtn" class="closebtn">&times;</span>
+                    <center>
+
+                        <p style="font-size: 250%;" id="modalheading">SELL</p>
 
 
-    </div>
 
-    <!---Mobile Site-->
-    <div id="mobile">
-        <div id="uppermobile" style="display: none;">
-            <div id="upperinnermobile">
+                        <button id="modalsubheading"
+                            style="padding: 10px; border:2px solid #b48948; color:#b48948; background:transparent; border-radius:50px; font-size:90%; padding-bottom:12px">
+                            LIST ITEM FOR SALE
+                        </button>
+                        <br><br>
+                    </center>
+
+                    <div id="modalbody">
+                        {{!-- buy --}}
+                        {{> 1.mainpages/desktop/tokens/modals/buy}}
+
+                        {{!-- sell --}}
+                        {{> 1.mainpages/desktop/tokens/modals/sell}}
+
+                        {{!-- change price --}}
+                        {{> 1.mainpages/desktop/tokens/modals/changeprice}}
+
+                        {{!-- Cancel listing --}}
+                        {{> 1.mainpages/desktop/tokens/modals/cancellisting}}
+
+                        {{!-- Request Signature --}}
+                        {{> 1.mainpages/desktop/tokens/modals/requestsignature}}
+
+                        {{!-- Request Password --}}
+                        {{> 1.mainpages/desktop/tokens/modals/requestpassword}}
+
+                        {{!-- Metamask Decline --}}
+                        {{> 1.mainpages/desktop/tokens/modals/metamaskdecline}}
+
+                        {{!-- Listing Confirmed --}}
+                        {{> 1.mainpages/desktop/tokens/modals/listingconfirmed}}
+
+                        {{!-- Loading Modal --}}
+                        {{> 1.mainpages/desktop/tokens/modals/loadingmodal}}
+
+                        {{!-- Gas Price Estimation Modal --}}
+                        {{> 1.mainpages/desktop/tokens/modals/gaspriceestimation}}
+
+                        {{!-- Gas Price Estimation Modal --}}
+                        {{> 1.mainpages/desktop/tokens/modals/editgasfees}}
+
+                        {{!-- Make Offer Modal --}}
+                        {{> 1.mainpages/desktop/tokens/modals/makeoffer}}
+
+                        {{!-- Wrap Ether Modal --}}
+                        {{> 1.mainpages/desktop/tokens/modals/wrapether}}
+
+                        {{!--Empty Modal --}}
+                        {{> 1.mainpages/desktop/tokens/modals/emptymodal}}
+
+                        {{!--Swap Tokens Modal --}}
+                        {{> 1.mainpages/desktop/tokens/modals/swaptokens}}
+
+                        {{!--Send Modal --}}
+                        {{> 1.mainpages/desktop/tokens/modals/send}}
+
+                        {{> 1.mainpages/desktop/tokens/modals/notactive}}
+                    </div>
+                </div>
 
             </div>
+
+
         </div>
+
+        <!---Mobile Site-->
+        <div id="mobile">
+            <div id="uppermobile" style="display: none;">
+                <div id="upperinnermobile">
+
+                </div>
+            </div>
+        </div>
+        <!---Mobile Site-->
+        {{> 0.layout/global/footer}}
     </div>
-    <!---Mobile Site-->
-    {{> 0.layout/global/footer}}
 </body>

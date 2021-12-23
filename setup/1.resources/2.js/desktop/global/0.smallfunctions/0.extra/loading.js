@@ -7,7 +7,10 @@ function loading() {
         console.log(h - headerheight);
         document.getElementById("loading").style.height = (h - headerheight) + "px";
         document.getElementById("loadingimg").style.display = "block";
-    } else {}
+        console.log("loading");
+    } else {
+        console.log("hmm");
+    }
 }
 
 function endloading() {
@@ -22,6 +25,9 @@ function endloading() {
     } catch {}
     try {
         document.getElementById("uppermobile").style.display = "block";
+    } catch {}
+    try {
+        document.body.style.backgroundImage = "none";
     } catch {}
 
 

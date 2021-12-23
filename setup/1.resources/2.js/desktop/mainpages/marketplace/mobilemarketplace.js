@@ -12,7 +12,7 @@ window.addEventListener('load', async function() {
         $("#loading").appendTo("#mobile");
         let bannerdiv = document.createElement("div");
         bannerdiv.style.height = bodyh / 3 + "px";
-        bannerdiv.style.backgroundImage = `url('../../../3.images/back/grid.png')`;
+        bannerdiv.style.backgroundImage = `url('https://storage.piksl.io/3.images/back/grid.png')`;
         bannerdiv.style.backgroundSize = "cover";
         bannerdiv.style.backgroundPosition = "center";
         console.log(document.getElementById("marketbanner").src);

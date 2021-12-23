@@ -3,5 +3,11 @@ async function logoutuser() {
     document.getElementById("profilelink").style.display = "block";
     document.getElementById("profileprofile").style.display = "none";
     console.log("logged out")
-    location.reload();
+    url = window.location.href;
+    urladdress = url.substring(url.lastIndexOf("/") + 1);
+    if (urladdress == "dashboard") {
+        window.open("/", "_self");
+    } else {
+        location.reload();
+    }
 }

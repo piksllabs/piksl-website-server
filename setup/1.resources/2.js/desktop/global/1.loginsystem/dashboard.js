@@ -29,7 +29,9 @@ window.addEventListener('load', async function() {
     document.getElementById("highestsell").appendChild(center2.cloneNode(true));
 
     if (localStorage.getItem("token")) {
-        let { loggedinaddress } = await getcurrentaddress();
+        let {
+            loggedinaddress
+        } = await getcurrentaddress();
 
         if (loggedinaddress == pageaddress) {
             document.getElementById("walletbuttons").style.display = "flex";
@@ -44,7 +46,7 @@ async function dashboard() {
     // let balance = await getbalance(loggedinaddress)
     // console.log(balance)
     let rand = Math.floor(Math.random() * 10000);
-    document.getElementById("pfp").setAttribute("src", "http://localhost:5000/dripclub/tokens/images/" + String(rand) + ".png")
+    document.getElementById("pfp").setAttribute("src", "/3.images/back/blankperson.png")
 
     // let promises = []
     // promises.push(getuserdetails(pageaddress));
@@ -81,7 +83,9 @@ async function dashboard() {
 }
 
 async function populatepiechart(tokens) {
-    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
     google.charts.setOnLoadCallback(drawChart);
 
     function drawChart() {
@@ -98,24 +102,39 @@ async function populatepiechart(tokens) {
             fontName: 'Google Sans',
             legend: {
                 alignment: 'center',
-                textStyle: { color: '#818181' },
-                scrollArrows: { inactiveColor: "#414141", activeColor: "#818181" },
-                pagingTextStyle: { color: "#818181" }
+                textStyle: {
+                    color: '#818181'
+                },
+                scrollArrows: {
+                    inactiveColor: "#414141",
+                    activeColor: "#818181"
+                },
+                pagingTextStyle: {
+                    color: "#818181"
+                }
             },
             width: '100%',
             pieHole: 0.5,
             pieSliceText: 'none',
             pieSliceBorderColor: "#ffffff",
             slices: {
-                0: { color: '#818181' },
-                1: { color: '#ce1b69' }
+                0: {
+                    color: '#818181'
+                },
+                1: {
+                    color: '#ce1b69'
+                }
             },
             pieStartAngle: 100,
             pieSliceTextStyle: {
                 color: 'black',
             },
             tooltip: {
-                textStyle: { color: 'white', showColorCode: true, bold: true },
+                textStyle: {
+                    color: 'white',
+                    showColorCode: true,
+                    bold: true
+                },
                 isHtml: true
             }
         };
@@ -274,8 +293,15 @@ async function populatedetails(pageaddress) {
     let totalbalineth = Promise.resolve(gethtml("https://etherscan.io/tokenholdings?a=" + pageaddress, 1))
         .then(async function(value) {
             let totalbal = value;
-            let a1 = totalbal.getElementById("HoldingsETH").innerHTML;
-            let b1 = totalbal.getElementById("HoldingsUSD").innerHTML;
+            let a1;
+            let b1;
+            try {
+                a1 = totalbal.getElementById("HoldingsETH").innerHTML;
+                b1 = totalbal.getElementById("HoldingsUSD").innerHTML;
+            } catch (e) {
+                a1 = 0;
+                b1 = 0;
+            }
             let totalbalineth = await parseIntoFloat(a1);
             let totalbalinusd = await parseIntoFloat(b1);
             console.log(totalbalineth, totalbalinusd);
@@ -303,9 +329,19 @@ async function populatedetails(pageaddress) {
     let usdtbal = Promise.resolve(gethtml("https://etherscan.io/token/0xdac17f958d2ee523a2206206994597c13d831ec7?a=" + pageaddress, 1))
         .then(async function(value) {
             let usdtbalc = value;
-            let usdtbalhtml = usdtbalc.getElementById("ContentPlaceHolder1_divFilteredHolderBalance").innerHTML;
-            let usdtbala = usdtbalhtml.substring(usdtbalhtml.lastIndexOf('>') + 1);
-            let usdtbal = await parseIntoFloat(usdtbala.substring(0, usdtbala.lastIndexOf('USDT')));
+            let usdtbalhtml;
+            let usdtbala;
+            let usdtbal;
+            try {
+                usdtbalhtml = usdtbalc.getElementById("ContentPlaceHolder1_divFilteredHolderBalance").innerHTML;
+                usdtbala = usdtbalhtml.substring(usdtbalhtml.lastIndexOf('>') + 1);
+                usdtbal = await parseIntoFloat(usdtbala.substring(0, usdtbala.lastIndexOf('USDT')));
+            } catch (e) {
+                usdtbalhtml = 0;
+                usdtbala = 0;
+                usdtbal = 0;
+            }
+
             console.log(usdtbal)
             document.getElementById("usdtbal").innerHTML = await ethtousd(usdtbal);
             document.getElementById("usdtbalinusd").innerHTML = "(" + await ethtousd(usdtbal) + ")";

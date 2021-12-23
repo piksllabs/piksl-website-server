@@ -1,0 +1,58 @@
+</head>
+
+<body>
+    {{> 0.layout/global/header}}
+    <br><br>
+    <div class="vertcenter"
+        style=" font-size:90%; background-color: #202020fa; margin-left:30%; margin-right:30%;  padding-top:2.5%; padding-bottom:2.5%; border-radius:25px; border:10px solid #414141;">
+        <div style=" padding-left:5%; padding-right:5%;">
+            <center>
+                <p style="font-size: 200%;">SIGN UP</p>
+            </center>
+            <br>
+            <center>
+                <p>Create a Piksl ID</p>
+            </center>
+            <div>
+                <form id="regform" style="">
+                    <p style="font-size:90%; margin-left:2.5%;">Name</p>
+                    <input class="logininput" style="width: 100%;" type="text" id="regname" placeholder="" /><br>
+                    <p style="font-size:90%;  margin-left:2.5%;">Email</p>
+                    <input class="logininput" style="width: 100%;" type="email" id="regemail" placeholder="" /><br>
+                    <p style="font-size:90%;  margin-left:2.5%;">Password</p>
+                    <input class="logininput" style="width: 100%;" type="password" id="regpassword"
+                        placeholder="" /><br>
+                    <p style="font-size:90%;  margin-left:2.5%;">Confirm Password</p>
+                    <input class="logininput" style="width: 100%;" type="password" id="regconfirmpassword"
+                        placeholder="" /><br>
+                </form>
+            </div><br>
+            <center>
+                <div id="regerror" class="vertcenter" style="display: none; font-size:90%;">
+                    <i class="material-icons" style="padding-right:1%;font-size:90%;color:rgb(189, 4, 4)">warning</i>
+                    <p id="regerrormsg" style="color: rgb(189, 4, 4);">Incorrect username or password</p><br><br>
+                </div>
+            </center>
+            <center><button class="whitebutton" onclick="registeruser()">Submit</button></center>
+            <br>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    {{!-- <form id="reg-form2">
+        <input type="text" id="ethaddress" placeholder="ethaddress" />
+    </form>
+    <button onclick="registermetamaskuser()">Submit</button> --}}

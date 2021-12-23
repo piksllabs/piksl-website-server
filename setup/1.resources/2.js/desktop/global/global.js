@@ -1,6 +1,7 @@
-window.addEventListener('load', function() {
-    profile();
+window.addEventListener('load', async function() {
+
     loading();
+    profile();
 });
 
 

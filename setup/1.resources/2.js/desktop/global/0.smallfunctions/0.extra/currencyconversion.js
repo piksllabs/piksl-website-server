@@ -50,7 +50,7 @@ function getethfixed(eth) {
 
 
 async function parseIntoFloat(string) {
-    var str = string;
+    var str = String(string);
     str = str.replace(/,/g, "");
     str = str.replace("$", "")
     return parseFloat(str, 10);

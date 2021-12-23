@@ -186,7 +186,7 @@ async function populate2(x, y) {
 
 
     console.log("newfinaltokens:" + newfinaltokens.length);
-    loadcollection();
+    await loadcollection();
     endloading();
     shownotactivemodal();
 }

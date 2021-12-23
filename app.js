@@ -22,7 +22,9 @@ if (cluster.isMaster) {
 } else {
 
     const app = express();
-    const { engine } = require("express-handlebars");
+    const {
+        engine
+    } = require("express-handlebars");
     var compression = require('compression');
 
     app.use(compression());
@@ -93,6 +95,9 @@ if (cluster.isMaster) {
         res.render('1.mainpages/roadmap')
     });
 
+    app.get('/register', (req, res) => {
+        res.render('2.extrapages/register')
+    });
 
     //App Listen
     app.listen(PORT, () => {

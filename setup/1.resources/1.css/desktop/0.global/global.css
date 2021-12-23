@@ -4,13 +4,20 @@
 
 html {
     scroll-behavior: smooth;
+    height: 100%;
 }
 
 body {
     margin-top: 0 !important;
     padding-top: 0 !important;
     font-family: "Poppins", "Google Sans", "Fira Sans", "Roboto", Arial, sans-serif;
-    background: #111111;
+    background-color: #111111;
+    background-image: url("https://storage.piksl.io/3.images/loading.gif");
+    background-size: 4%;
+    background-repeat: no-repeat;
+    min-height: 100%;
+    background-position: center center;
+    /* background: #111111; */
     color: white;
 }
 
@@ -23,6 +30,9 @@ body {
 }
 
 @media only screen and (max-width: 767px) {
+    body {
+        background-size: 15%;
+    }
     #desktop {
         display: none;
     }

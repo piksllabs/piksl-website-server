@@ -1,13 +1,13 @@
 /* Three divisions */
 
 .headerlogo {
-    content: url("../../../3.images/logo60pxwhite.png");
+    content: url("https://storage.piksl.io/3.images/logo60pxwhite.png");
     width: 90%;
     cursor: pointer;
 }
 
 .headerlogo:hover {
-    content: url("../../../3.images/logo60pxgold.png");
+    content: url("https://storage.piksl.io/3.images/logo60pxgold.png");
 }
 
 #headerbar {
@@ -55,7 +55,7 @@
         display: block;
     }
     #mobileheaderlogo {
-        content: url("../../../3.images/logo60pxwhite.png");
+        content: url("https://storage.piksl.io/3.images/logo60pxwhite.png");
         width: 15%;
         opacity: 0.9;
     }
