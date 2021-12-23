@@ -24,9 +24,20 @@ if (cluster.isMaster) {
     const { engine } = require("express-handlebars");
 
     //Setup
+    var options = {
+        etag: true,
+        maxAge: 3600000,
+        redirect: true,
+        setHeaders: function(res, path, stat) {
+            res.set({
+                'x-timestamp': Date.now(),
+                'joseph': 'hi'
+            });
+        }
+    }
 
-    app.use(express.static(__dirname + '/setup/1.resources'))
-        //HBS setup
+    app.use(express.static(__dirname + '/setup/1.resources', options));
+    //HBS setup
     app.engine('.hbs', engine({
         extname: '.hbs',
         defaultLayout: __dirname + '/setup/3.views/0.layout/defaultlayout',
