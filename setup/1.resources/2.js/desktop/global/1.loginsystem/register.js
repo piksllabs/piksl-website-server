@@ -28,7 +28,8 @@ async function registeruser() {
         let result = await register(name, email, password);
         console.log(result.data)
         if (result.data == "ok") {
-            window.open("/dashboard", "_self");
+            localStorage.setItem('token', result.data);
+            //window.open("/dashboard", "_self");
         }
     }
 }

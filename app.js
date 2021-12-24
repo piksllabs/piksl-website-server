@@ -36,8 +36,7 @@ if (cluster.isMaster) {
         redirect: true,
         setHeaders: function(res, path, stat) {
             res.set({
-                'x-timestamp': Date.now(),
-                'Cache-Control': 'no-cache'
+                'x-timestamp': Date.now()
             });
         }
     }
