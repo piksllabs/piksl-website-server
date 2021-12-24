@@ -98,6 +98,14 @@ if (cluster.isMaster) {
         res.render('2.extrapages/register')
     });
 
+    app.get('/privacy-policy', (req, res) => {
+        res.render('2.extrapages/privacypolicy')
+    });
+
+    app.get('/terms-of-use', (req, res) => {
+        res.render('2.extrapages/termsofuse')
+    });
+
     //App Listen
     app.listen(PORT, () => {
         console.log(`Server running on ${PORT}`)
