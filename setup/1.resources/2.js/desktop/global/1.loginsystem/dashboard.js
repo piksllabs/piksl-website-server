@@ -290,23 +290,26 @@ async function populatedetails(pageaddress) {
     console.log("details");
     let promises = []
         //Total Balance
-    let totalbalineth = Promise.resolve(gethtml("https://etherscan.io/tokenholdings?a=" + pageaddress, 1))
+    let totalbalineth = Promise.resolve(gethtml("https://etherscan.io/tokenholdings?a=" + pageaddress, 2))
         .then(async function(value) {
             let totalbal = value;
+            console.log(totalbal);
             let a1;
             let b1;
-            try {
-                a1 = totalbal.getElementById("HoldingsETH").innerHTML;
-                b1 = totalbal.getElementById("HoldingsUSD").innerHTML;
-            } catch (e) {
-                a1 = 0;
-                b1 = 0;
-            }
+
+            a1 = totalbal.getElementById("HoldingsETH").innerHTML;
+            b1 = totalbal.getElementById("HoldingsUSD").innerHTML;
+            // } catch (e) {
+            //     a1 = 0;
+            //     b1 = 0;
+            // }
             let totalbalineth = await parseIntoFloat(a1);
             let totalbalinusd = await parseIntoFloat(b1);
             console.log(totalbalineth, totalbalinusd);
             document.getElementById("totalbalineth").innerHTML = await addcommas(await getethfixed(totalbalineth));
             document.getElementById("totalbalinusd").innerHTML = "($" + await addcommas(totalbalinusd) + ")";
+            document.getElementById("balancemainloading").style.display = "none";
+            document.getElementById("balancemain").style.display = "block";
             return totalbalineth
         });
 
@@ -360,9 +363,11 @@ async function populatedetails(pageaddress) {
 
 
     //Highest
-    // let abc1 = Promise.resolve(gethtml("https://etherscan.io/address-analytics?m=normal&a=" + pageaddress + "&lg=en&cc=USD", 2));
+    // let abc1 = Promise.resolve(gethtml("https://etherscan.io/address-analytics?m=normal&a=" + pageaddress + "&lg=en&cc=USD#balance", 2));
     // abc1.then(async function(value) {
+    //     console.log(value);
     //     let highestbal = value.getElementById("high_bal_eth_value").innerHTML;
+    //     console.log(highestbal);
     //     let highestbal1 = await parseIntoFloat(highestbal.substring(0, highestbal.lastIndexOf('ETH')));
     //     console.log(highestbal1);
     //     if (highestbal1 == "-Infinity") {
